@@ -5,25 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#F5F5F1">
 <meta name="mobile-web-app-capable" content="yes">
 <title>SSJJKA Adult Syllabus</title>
-<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIiBmaWxsPSIjMUExQTFBIi8+PHRleHQgeD0iOTAiIHk9IjEyMCIgZm9udC1mYW1pbHk9InN5c3RlbS11aSIgZm9udC1zaXplPSI5MCIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+SzwvdGV4dD48L3N2Zz4=">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIiBmaWxsPSIjNUI0Q0E4Ii8+PHRleHQgeD0iOTAiIHk9IjEyMCIgZm9udC1mYW1pbHk9InN5c3RlbS11aSIgZm9udC1zaXplPSI5MCIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+SzwvdGV4dD48L3N2Zz4=">
 <style>
   :root {
-    --bg: #F0F0F0;
+    --bg: #F5F5F1;
     --surface: #FFFFFF;
-    --surface-alt: #F7F7F7;
-    --text: #2C2C2C;
-    --text-muted: #666666;
-    --text-hint: #999999;
+    --surface-alt: #EDEDED;
+    --text: #2C2C2A;
+    --text-muted: #666664;
+    --text-hint: #A0A09E;
     --border: rgba(0,0,0,0.1);
     --border-strong: rgba(0,0,0,0.2);
-    --accent: #6B4CA8;
-    --accent-bg: #F0EBFA;
+    --accent: #6B4CA8; 
+    --accent-bg: #F0E6FF;
     --accent-text: #6B4CA8;
     --radius-md: 8px;
-    --radius-lg: 12px;
+    --radius-lg: 12px; 
     --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
 
@@ -53,10 +53,10 @@
     padding: 10px 14px;
     border-radius: var(--radius-md);
     border: 0.5px solid var(--border-strong);
-    background: #FFFFFF;
+    background: transparent;
     color: var(--text);
     cursor: pointer;
-    transition: background 0.15s, transform 0.05s;
+    transition: background 0.15s, transform 0.05s, opacity 0.15s, filter 0.15s;
     -webkit-appearance: none;
   }
   button:hover { background: var(--surface-alt); }
@@ -106,7 +106,7 @@
   #splash {
     position: fixed;
     inset: 0;
-    background: #FFFFFF;
+    background: #F5F5F1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +128,7 @@
     animation: splash-in 0.8s ease forwards;
   }
   #splash .splash-title {
-    color: #2C2C2C;
+    color: #2C2C2A;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -150,10 +150,9 @@
   .kr-frame {
     padding: 18px;
     border-radius: var(--radius-lg);
-    background: var(--surface);
+    background: var(--bg);
     transition: background 0.2s, padding 0.2s;
     position: relative;
-    border: 1px solid var(--border);
   }
   .kr-frame-solid {
     border: 5mm solid var(--kr-belt, var(--border));
@@ -164,12 +163,6 @@
       inset 0 0 0 2mm #FFFFFF,
       inset 0 0 0 4mm var(--kr-belt, var(--border));
     padding: 22px;
-  }
-
-  /* 30 Throws black frame styling */
-  .kr-frame-30throws {
-    border: 5mm solid #000000;
-    border-radius: 40px; /* Highly rounded as requested */
   }
 
   button.kr-belt-chip {
@@ -216,7 +209,6 @@
     text-align: center;
     margin-bottom: 16px;
     position: relative;
-    border: 1px solid var(--border);
   }
 
   .move-number-top-left {
@@ -308,36 +300,530 @@
 <body>
 
 <div id="splash">
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADLw5OQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAA9YFJREFUeF7tXVp3ZEd15n0z542bN08yYwRIoAYb0zZNAm4wGAwYZky3m25/G39I/4T9eeyPaZ8YMBjMMBgDhm43m7YtNm2j2x9YgA6O7VZZqXJmXmfeX7X+mYnKnGvWjYjIzHPi6lm99z6f3YeqfPbeexwVFEVRFFUVwU9FURRFUTXBD0VRFEVRNcEPilXm4Ycf9gcGBvC6HlD7C5XbHhSFr7m5OajTfP4fFL7C665Ofw8KX14867f6b/m8N8PnvxUFXz7bVfiEwpeXz/ZVPt+l8H9Q+IKK/3w+i3B8OfFzH1XhkxD5fNbi+Eri+CwiInrO8549C6uM2Xj8X7E6fH//OQ34v1Y/RVTX8P/K/f39+I//Z/VTU4V775H9XbofhS9f5b+u+0b91X9e+fOf+yv834wMhS+fzeazfdbv//R5f5XPV5XPyOfv+WxFhV/4H1X4q44P7u8PCl++9F7l58vPZ/unfN5X4fOKX+Xnr8LnVf5v9f/H//f5/Oof6v/+v+V3v0r5+Wp//nOf99U1/H8X4ffX7z47v/Z5v9Xfq4r7fFVZ48uXFz/P0L//M/H5z5XfzY9//v+f686X9/H5/Of/G3G8OfF3K/IOfq6P+PnPVp3T6H37r9VPkYvF/6vi5+rn5V/uE/K7X6+8N/67f7lvyO//e8XPe4X7vEL5//P/V/5C5P/5/yt//hvyb4zfy78xfi9vht/H2/E0Rfw+H35u/HwFfk48b48fU6XN6H1//z5v9Xf57v/f578H5Y/B8Xfw/v7jI/89jPq9W/4fHz+H9f/j/5R/m9/bZf3wW4fO/P8/I/Yv8f87Pv7D6Y/7ZOn75vX354/f5vH/V/z8//hM/N5/PyOc/O26/8f4+/2w//m4F//f5N/rnB4X8/+f//8p/5v/6V/u/uY5v8v2P/X/wX/0v8/lO79u7/v9Yf+V393//N//T+8/f9T+Xw6v4+Z4X/m/9eT7P+I77fK/Xz//9U/8v7vfM9Xf1/vP/Z+f8+s9V58+I//z/F//l+v/V5+0P5X8+W/06/j/+/08+b5/v+X/P5/5q/D/8v+8N9/Xm8/77f7f9X9fv8//v8//f/X//X4fD6/F/8//f6+8N/9//X6Xf83O//5/5X8Xv/xW//8/E//v/iv9+/+X4/b//V/x8fD5/Z/7+fH9//rVxfC/X8f87fs+/5f9b4f97u+uP5Z++YxUf7fP+Z9XffwZfP/5/Xj9f7+9UfD5zX8U9K4L7w5//N//X/P///uT7//z5X+/v889S3D/9vP/Z//X6+e9Sff8+uN//zFf8X///5e/f/Vf897/+87//n/953//r6//+Zf///eZ3eX9Xxf/P9X+/9f/+/8v9vfr/fI9X+/5/r+Lv///v+Vf9X7//v/z/u//7//+Vf7/339+r+P96/7++v9//+r/fv//uT7/Xf///uT/Vf49X9/F3//97f/+r9//f/1f9X78//8vfv//9X//55//vU79/p/+9b//Xv9X//7//uT/3///f/9//f///X///9X//75///r/+/6//7///v//+f/9//r/ev+/6//7/v///v/+//X///X///9f///n//+//f/v/v/3/+//v/+//X///V///f////f/+//f/7///+f///9f///1/v/7/ev/r///+f///1/X///X///1///7/ev/7//3/9/v9/X+v/f/+/+v/+//v///6/v///+f/v///X///X9ev9////r+9e1vXvfvX9r///+//3/fv///9/v7///9ev9e9//1///7/ev9f///X///n/+//3///f///v//+f///n//v///9f7/+//f////+//9f///9f///r/9f/ev///9ev9/r+//r///X///X///X///f///v///6/X///V////f////X///X///9f///f////f////f////X9f//+f9/X+X9X+f//9f/r+v///+v6/+//1///X///f///f/39//+///f///9f///v//X9ev/r+/+/7////+//v/7///6//v/+//+//7/+f///+v6/X///9f//9f///r//v/r///r///+v///6//9e//vXtb1rXtb17371/evX9f/r+///+//39/X9X9f1f1f1f/r+///+//39/X9//9f9f///V////+//+//v/7//f/39//9//X/1/X///V9a9ev+9rXtX///+v///r+/+/6//X/+//f/r+/+//f/v+v//X///f///v///+v+9//v/7//X///X///v////f////v////X////X///1////r+9a9e1e1r2tev9+9/f///7//+f/9//r///X9X9f//+v+9/+//+//+//7/+f/7/+v/+/6//7///6//+//3///7////+/+///ev///+f9/r9X9f1////V/+//f////7/+/6//7/ev///7////X////+/+//9X///+v///ev+9evatf1vavXtfvX//373/+/7/r///f//7/+f9/n/+//X////f/7//f////+/+//9X////7/+//9X///9f///+///9a1rWtb//f6/ev///9e1/ev////6//X//X////7////+//9f///+f///r+///9a1rVtb//f6/X//9a9rWtb//f6/r9a//7/+v///+f/v////X+X9f1///f/9f9f///1/9/3+X////X/r/9f////X/X9f/ev9/Xtb//f6/ev+9a//ev9//f//9f/X////7///9f///7////r//v/r///6////6////+v////r////+f///r////+v///X+a9rVta3tb//f5/+va3tb//f6/Xta1re9vX///X+///ev///Xtb//f6/r9e1/X96//ev+va/rW//Xtb//+va//+//+//r/9ev9ev/7///X9f//Xtb9f5////v/+//X+va9rW//X///Xtb3vfvX//39e9f/r///6/X///X///r////7////v////X///+v+///+f/////X////7/X///v//+//f/v///+v////6////X////+//X+X9X//f5/X///f/+//v///f/+//v///r+X//f5/X///f/+//v///9f5//evf7///r+9a//X//r+//f/r/9ev9a//+//f////r////7/X///X////X////9X///X////v////X////X///1////9X////7////r////+///9ev///9ev9evf//+v+va/rX//r2va3r297Vtf/f6/Xtf/Xtb//ev//Xtf///9f////+/3////r+//v///X/r/9X/r/9ev9X/r/9ev9X9ev9Xtb9a1rWva9r3tb1rX//X///Xtf9a1f9a//ev///+v////+///ev///+v+///7////X///X///1///7////+////X///r//f6//7///f9/X////r+v/ev//X9X9ev96/ev//Xtf///9f////+/3////r+//v///X/r/9ev9ev9ev9a1re//ev9/r///+v+///+f9Xtb///Xta//f5///+//39/ev////Xtb/evX9ev//X+va1vf5re16/Xtb3+X+v+9a/XvX9Xta1vf9re1re///9re///+///v////+//ev+///r////ev///+v////r////X///+f///r////7///+f/////ev////+v/r///9ev///9ev+va/ev+va/ev////+v///9f////ev+va9r//7/ev+///X+a1vb9/n9a1vb9ev9f1vf3/n/r+X//evf///ev///r+//v+//X9f1a1vb//e///7////ev////7///9ev9f////r+///7////r///7///9X///+///+v///7///9ev+Xta1re1re17Wt7Wre//f6/Xte/vWtb/Xtf3rW9rWt7Wvf/re//ev9/Xte///+v///6//7/+v//+v//+f9/X//X////7////+/3//9X9f9ev///+v//9ev///X////X///r////9f///v/v////9ev////r////X////+v////+v///+f///9f9e1/e///+v//f///7////+///r////9f////X////r////+///9a1vb9+9a1rb//evXtf///f/f69a//9Xtb9a1v/ev9ev///7////Xtb9ev+v5/+//f/7/v9ev9X9ev///X9f9ev9a9f9ev/X+///r+va1vf69re9rWt7//ev9ev////ev//+f///r9f9e1e3r3///X9X/+/7//X/r///9X////9f///X///9X////r////X////9ev///9f////ev//9ev//9f///7////r+//v////r///X9///r+f////r////7////v////r////9X////v/f///f////v////X////+v///7////Xta3tb///re//f5////re//f5/9//X//7////6////r+//ev5re///+va3re9/rWt6//+/+va1vf6/ev//Xtb///Xtb///r9f9f5///+///ev//r///ev9f9ev///ev9a//re9/f///r29/3/ev7//7/v///X9X9f1ev//re/Xtf9a/r//7////r+va/re1re///9/X9X9f1f1f/f6/v////+f///f5/Xtb//+9a//+va///+v///v////+///f//+v//ev////r////r+//ev+va///ev7//ev///f5////X9f1///9///ev///+v////+v///+f/////v///X///r/9+///evX9f1/W/+/7//re9/f///f////r////ev////ev///r////ev////+v////r////7///ev+f/9/n////+v////X////ev+v//X9f1/f6/Xtf1/f6/X/9X9f/Xtb/ ev////re//ev9re1rX/3///e1rW//+9re1veva///ev6//ev+va3/f5///X+va/v//+//r///X+a3ta///re///v9///Xtb///f6///re//+va//e///6///+/+/ev///+v///v////ev+va///7///9a1rf///6///+/+/6//X///9ev////9ev///X///r////r+//v////7/Xtb//ev+Xtb///X9a9rWtX/ev9a1re///ev9/ev7//+/3////+///r////r+//v///X/7/Xtb///r/7/Xtb//+va3tb///f5////6//ev///7///9ev9ev////9ev///f5///ev////X////v////X////+v////v////r+//v////r////r+Xtb//X/Xtb3te//f59f9f////+v///9f////+/3////9X////+///9X9a9rXte/69a3te//f59re///r///X9X9Wtb///6///f//7////r///9f/ev///ev///7///+v9re16///r9re3te9/Xte/rWt//Xtb//re///X9a1rb///ev9re1re9re17W/+/+//X+///re1vf3////re1vf5///7////r+//v////r////+v////+///X////+///ev///v/+/+//+f/7/v////r///v////v////7////v////ev////7///ev////re///r+//ev///X////9X///+v///v/+//X9e1vf3/e1rWt7Wt7Wtb/+//v+///7////ev///+va3rb//7/ev+re1vf5/X/r+//ev///+v///X+va1rf//+v+X/X9X9X1rX/3te9re///Xtf9a3tb///Xtb9ev+///6///f5/ev9a1vf3+///r+//r+//X////+///7////v////X///+f9ev///ev////9ev///9ev//9f///7/X///v//f/3////r////+/ev////+v///r////+v///7/re//ev9re///f////9X////9ev///X////r////7////v////X///+f9e1tb//+v//f///ev///r/ev+///7///ev////re1rf//9ev9ev+X//r///r+//r+//X////v////v////X///+f////7///+/7///9f////X///r//v/+/+//6/f/3////r////ev+v/ev//r/v///7///ev///ev////7///f5////re9re1rb///X+va9rb///re1rf69b//+///ev////+//r+va1rf///f//7/+v////7////v////X////+f9ev///ev+///+/ev+va3/ev9Xtf///X///X+9/f///ev///r+Xtb3tb/ev////ev///+v////+v///ev///r/re9/f5/r9re1vf69f9ev///ev///X9Wta//+//r///7///9f/re///re1rf3///Xtf///r///X9a1rb///f5////r////ev///ev///r///+v9re3/X9a3re/ev+re9e3+v+re3v+/+9re9/ev////r////+/X/9ev///ev+///r////+f/r////X///+f9X+X////X/+/+v9///X/ev///r+9a3v///r9e1vf5///f7/Xtb///r///+va3/ev///r/re//Xtb///X9a1rf///6///f5///9X////9f///re1rf3///7///9ev9ev///7///ev9re1rf///f7/ev///7///ev///+v+va/re1rf///ev9/X9re1re9ev+va3tb///7////v///+v9ev///+v+///re1vf3/e1rf///f5///re///ev///r+//r+//+v+//re9rf9//re9/+//+v6///9f///+va/ev///X/X////+v////7///+/+//9f///+v////6/ev/39f9b///re//e///6///+/+/6//ev//X+X///f5/ev///7/Xtb///r///Xtb9ev///6///+/ev////r////X///9f///X+va//re///re///6/3/Xte//+v//ev////re///re1rf///f5///ev///ev///6/ev////9ev////X//re1vf5///f5///ev///+v//9ev////ev//re1vf97Wt//ev///re//+v////7///+v9ev///+v+///re1vf3/e1rX/ev////+v9e1vf5/X/r///X/X////X///+v////+/ev/ev7//Xtb3rWt7ev///ev7//r+//ev////re///re//+va//e///re9vf//7/ev///r9ev9ev+9re9/e9/Xte/vWtb3tb///v/Xte/rWre//re9/e17e///r9re3te9/Xte9a1r///re9/+17e//f6/ev///+v9+9ev////re3te9/e///ev////7/X9///+v//ev////7///9f////+v///f////6/r/+/6//7///+v+X/X9ev////re1rf/re9/ev////ev////9X////+///X////re9vf5///re1re9rf3/re1re///ev///ev////re///r9re1rb//f5/X/r/ev///re///ev////r+va/re1vf3/Xta3ta/ev////X////Xtb3te//f59f9f////re1rf///+v/X/+/+//3/X////+///+v9///X/ ev///r+Xtb//r///re9+97+f///X9X/9ev////Xta//+va//r///r///re//re///+v//+v//r///re9a3vf1rXta1re1rf//9ev9ev+X+va3re9/rWt/ev///re//r/r+//f/r/re3tb///X///Xtb3v//f5///+//r/re1re9f1vf//ev////r9ev9a1re9re17Wt7Wvf/re9re///+v///7////ev///+va3rf///r9a3te/rX9f1///f//+v//ev////9ev///re//ev9///re//ev9///re//r///ev9ev////ev////re///+v////ev////re///9X////r+//f////X9a3t73tf1rW9re1rf//9ev////r////+/ev////+v/ev///+v///7/+/ev///+/ev9ev////7///r+//+va/re1vf9rXta1re1rf///+v////+v////+///+/+//f////r9ev///7///7/e///+f///ev///+f/////ev////+v///9e1rf///f5/Xtb//+9rf9+///v/+//9f///X+v///9ev////+/X/9ev9ev////+/X////+f////+v///+f////7/+/+/+X////ev////r9e///6///re//ev////7/+//9ev////+v//re1vf///+/3/X/+/+//3/X////+///+/7//ev////ev+va///r/+/ev////+v/ev///re1rb//+va3re9/re3re1rb//X////7////re//+va//re//re//e///6///re//e///re//e///ev///+/ev9ev////re//re1re9ev+va3tb///7////r////X///re9e///+v//re//re///re//Xtb///X9a1rb///f5///+v9e1/e1rW//re9/re1rf///f5///Xtb9ev+///6///f5/r////+///ev///+v9+///ev//re9/X//X+X////X////ev///7/+/+//f/f69a//9ev9ev9ev9a//re///Xta3rWtb///re//re9rf3re9re1re9re9a//re///ev////+//r+va1rf///+v////ev////7////+v////f9ev////+/X/+/+///ev///v/+/+//+v+//r+//9ev////9ev////X///re1rb//re///+va/ev///7////ev+f/re///7/ev////ev//f5////+/3/+/+//3/X////+///X+a9r/e///ev7//r+//r+//X////re///re//+v///+/+X////+/+//ev+va///7////re///f5/X/9X9f1ev//X9a3tb///Xtb///+v////9f9a//ev9/ev/ev///+v///7///ev///ev////+/+X////ev////v///re//X////7////r////X///+v///+v9///r/X//r/9+///ev///re//r9re///+v///7///+v///re1rf//re///ev////re///re1rf//Xtb///X+va1rf///7/re9/e///re1re9ev///7/+/+/+va///re//r+//ev+r+//r/9+///9f////+/3///+/+//3/X////re//r/9ev///ev+va///v///re///ev///v///+/3//9X9a1r///+/+//v+//r+//re9rf9//v/e1rW///re//re1re9re9e///+/+//ev///X////9X////ev+r+//v/f9X/re//X9re///f5/Xte/vWtb3tb///ev+Xtb///Xtb///r///X9a9rXte9re3tb///ev+9a1rf3re9re1re9re1re9a///r////+//X/9re97Wt7//f5///ev9ev////ev///f5///re///ev////+f////X///9f///+v/ev/ev7//r+//r+//+v+//r+//e///re9+X/f5///X+///ev////9ev////r////+/X/+/+///ev////+//r/r///ev9f9ev///+v9re1re9re17Wta3rb//X////9X/ev9ev////Xtb/ev9re9e3+v+va3tf///v9/ev////+v9f9ev////+/3/f5///ev9X9ev9ev////f////v/9ev///9ev//re1vf97Wt7//re9/e///ev///ev///7///+/+//9f///r+//+v5////+v////X////ev////r+va/re1rb//+va3re9/f5/r9re9e3+re//re1rb//+va3rb//7/X/+/+//3/X////+///Xtb//7////+/ev////+v//Xtb///r9e1vf5///f5///Xtb3tb/ ev////ev///6///ev////ev////9X////+///Xta3re1rb//X////9ev9ev///+v9re1vf69b//+v///ev////r////+/X/re//r9a1rf///6///ev///ev///r+///ev////ev///+v9ev///+va3rf///7/+/+//9f////9f//+va/ev///+/+X////re1rf///6///ev////9X////9ev///+/+//f////+v///+/+/+//+v//f///ev///+f9ev///ev////+/X/+/+//6/f/3////r+af///9///f////v+va3/ev///r9e3tb//+va3rb//re1rb//evXtf///7///9e1rf///f////+/3/f5////ev//+f9X+X////X////+v9X/+/+//3/X////re//e///6///+/+/6//9f///r+//9ev////v////r////+/+/+/+//+f///+v9Xtb///r/7/+/+/+//9f///+v///v////v////v////X////+v////r////ev////+v////+v///9f////X////ev////+v////ev////7///ev+f///ev///+va/re1rf//9ev9ev/re///f////9X////9ev///7///7////X/X////ev+f/+/+v9///ev///+v+//e///7////9f///+v///7/+/ev////+v//re1vf///6///re//re9rf3///f5/X//X//7////6///9f///v9/ev9a//ev9ev////re//r+//ev+r+//f5////v////re1rf//+va3/f59ev////9ev9a//ev7/r9Xta9vf//ev/ev////r////7/+/+/+//6/f/3////X9a1re///+v//+/+//v/9X9f1///+v//9ev//re1rf///+v/X+9re//+v////7/3/f6///r+///re///ev///7///ev///r+//e///v///Xtb3//f5////re//X////7////r////+f/v///+/+/+va///+f////7/re///ev///r/ev9a//X///re///ev9ev////+/3////re9Xtb//r///+///+///+/ev///r9e3v///Xtf/X9a1rf//evXtf///+v/Xtb///r9a3te/rXte1vf9/nte1rb//X////9X/ev9a//+//+//9f////r9ev9ev///ev9ev////ev//f5////+/3/+/+//3/X////+v9a1vf3/e1rf///f5///ev////+//r9re1re9ev+va3tb///7////v///+v9ev///+/3////re///ev///r+e///6///re9Xtb///7////ev+f////7///+/7///9f////ev////7////7////ev////7////ev////7///ev+f///r////+va/re1rf//re///re///ev////ev///+v+va/re1vf3/e1re9re1vf//9ev////ev////9ev////X///re//ev////7///+/+//9ev///+v9///X/ ev///r+va3rf///r////v////+/X/+/+///ev///re1rf//re///e///v////7///re//X////7///9f////re//re//e///6///+va///+/7///+f9ev///ev+///+/+/+r//ev////Xtb///X9a1re///f5/Xte/vWtb3tb///ev+Xtb///X+e///6///re9Xtb///f6///+va3/ev///r9e3re1r///ev9/ev7///r/+/+//3/X////re///re//+v///X+///ev////9ev////9ev////9X////ev////+/3/re///ev///r+//v///X/+/+//+f9X/69ev////ev////9ev////+/+/+//+f///+v9///X/ ev///Xtb///re///e///v9///+va///+/7///+/7//ev////ev+va///7////re///f5/X/9X9ev///re1rf//re///re///re//re///+v9ev////re//r9re///ev///+f+///Xtf///f////v////7////+/ev////+v//Xtb///r/7/re//ev9/ev///7////ev9///r/X//r/9+///9ev///9ev9ev////9ev////+/+/+//f////r////ev////+v+v/ev//r/v///7///ev///+/+X////ev////ev////X////+v////+v///9f////+v9X////X////ev+f/re///e///7///re///e///6///ev///r9a1rf///6///ev////ev////+v/ev///+/ev9ev+v9re///re1rb//+va1rf//f5////r////ev9X////7////9X9ev///+/+//9f////r9X/+/+//+f9Xtb///re//re///re//re///+v//+/+//v+//r+va1rf//re///e///v9/re///+v+//e///v///f5/ ev+X/9X9X1rXte//ev9ev////r////7/+/+/+//6/f/3////r+//ev+///r+//r+//X////re///re//v9//e///6///re//re//Xtb///X+Xtb///X9a9rb//re///f////9X////ev+r+//v/re1re9rf3re9re1rb//f6////re1rf///+v/X/+/+//3/X////re//Xtb///r+//e///+v//+/+//ev+va///v///f5///re///ev///r/Xtb//+va3re9/re3re1rb//Xtb///re1rf///+v//re//X9ev///Xtb///f6/ev///+v///e///6/X////ev+v/ev///re///ev///ev////9ev////+/+/+//+f9Xtb///r/re9re9r3vf9re1re9ev+va1rf//f6///+/+X/r9Xtf9/ ev////v9re9e3+re//re1rb//+va1rf///+v/+/+//3/X////+v9Xtf9e1rf///6///ev////9X9a1rb///f////v///7////ev///+/3//+v//f///ev///r+//v///ev////X////v///+/ev////re1rf///7/f9X/+/+//+f9X9X////7/Xtb//ev//9f///7/Xtb///r/re9/e9/ev9re9e3+v+re9re//f69a1re/re///ev9X9a1rb///6///ev////+/3/re//X9X9ev9ev///7////r+//+va/re1rf//re///e///v9/re///+v+//e///v///f5///ev///ev+va3rf///7/re///ev///re1vf97Wt7//+v//f///+/3/X/+/+//6/f/3////Xtb///f5///+//9f////re1vf9rX/3///e1rW//+9rf9+///X////ev///X+///ev////9ev///+/X/+/+///ev////+//r/+/+//v///r+///ev////ev///r///+v////ev////ev+f////v///re//X////7///9f////re//re9rf3///f////+/3/+/+//6/f/3///+///r////r+//r+//X////+/ ev///v////r+//+v+//ev+va///7////re///f5/r9a9rb///6///+/+/ev///+/ev////+/X/9ev9ev///+/X////ev////ev////ev////+/+v///6///re//re//re9rf3///ev////re9ev///+/3/+/+//6/f/3///+///ev////r+v/ev+///+/ev////9ev////+/ev9X////7/re///re//+v////9f////+v9f/X/Xtb3te//f59re///r////Xtb3te/re//re9X/re///f5////v////X////ev+r+//+v9a1rb///X+va1rb///Xtb///re///re//XTB","class":"kr-belt-chip"},"White (0)"),el("button",{"on":function on(){state.editingBelt="Yellow",state.screen="edit_belt",render()},"style":"--kr-chip: #F2C94C; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Yellow (18)"),el("button",{"on":function on(){state.editingBelt="Orange",state.screen="edit_belt",render()},"style":"--kr-chip: #E8823A; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Orange (13)"),el("button",{"on":function on(){state.editingBelt="Green",state.screen="edit_belt",render()},"style":"--kr-chip: #3B8A3B; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Green (25)"),el("button",{"on":function on(){state.editingBelt="Blue and White",state.screen="edit_belt",render()},"style":"--kr-chip: #2F6FB8; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip kr-split"},"Blue and White (13)"),el("button",{"on":function on(){state.editingBelt="Blue",state.screen="edit_belt",render()},"style":"--kr-chip: #2F6FB8; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Blue (12)"),el("button",{"on":function on(){state.editingBelt="Purple and White",state.screen="edit_belt",render()},"style":"--kr-chip: #6B4CA8; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip kr-split"},"Purple and White (13)"),el("button",{"on":function on(){state.editingBelt="Purple",state.screen="edit_belt",render()},"style":"--kr-chip: #6B4CA8; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Purple (12)"),el("button",{"on":function on(){state.editingBelt="Brown and White",state.screen="edit_belt",render()},"style":"--kr-chip: #6B4A2B; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip kr-split"},"Brown and White (13)"),el("button",{"on":function on(){state.editingBelt="Brown",state.screen="edit_belt",render()},"style":"--kr-chip: #6B4A2B; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Brown (21)"),el("button",{"on":function on(){state.editingBelt="Black Belt",state.screen="edit_belt",render()},"style":"--kr-chip: #1A1A1A; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Black Belt (26)"),el("button",{"on":function on(){state.editingBelt="30 Throws",state.screen="edit_belt",render()},"style":"--kr-chip: #000000; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"30 Throws (30)")]);
-    const d=frame(null,[c,h,l]);
-    root.appendChild(d)}
+  <img src="[PASTE_SAM.PNG_BASE64_STRING_HERE]" alt="Club logo">
+  <div class="splash-title">SSJJKA Adult Syllabus</div>
+</div>
+
+<div id="app-shell">
+  <div id="app"></div>
+</div>
+
+<script>
+(function() {
+  const splash = document.getElementById("splash");
+  setTimeout(() => {
+    splash.classList.add("hidden");
+    setTimeout(() => splash.remove(), 700);
+  }, 2000);
+  splash.addEventListener("click", () => {
+    splash.classList.add("hidden");
+    setTimeout(() => splash.remove(), 700);
+  });
+
+  const LOGO_SRC = "[PASTE_SAM.PNG_BASE64_STRING_HERE]";
+
+  // ----- Full syllabus data (name + description per move) -----
+  const SYLLABUS = {"Yellow":[{"num":1,"name":"Hip Throw","desc":"A foundational throw where you turn into the opponent, load them across your hip, and rotate forwards to drop them. The classic O Goshi entry that underpins many later variations."},{"num":2,"name":"Hip Throw (with Truss Lock)","desc":"A standard hip throw entry, but as the opponent lands you maintain hold of their arm and apply a truss lock — wrapping and trapping the elbow on the floor for control or submission."},{"num":3,"name":"Hip Throw (with Cross Over Arm Lock)","desc":"A hip throw followed by a transition into a cross-over arm lock, where you step across the opponent's body on the ground and lever their straight arm against your hips."},{"num":4,"name":"Defence Against Kicks (Whilst On The Floor) x 4","desc":"Four ground-based defences for use when you are downed and the opponent is kicking. Covers shielding, leg checks, kicking back, and creating space to get back to your feet safely."},{"num":5,"name":"Shoulder Arm Lock","desc":"A standing or kneeling lock applied by trapping the opponent's arm and using your shoulder as the fulcrum, levering their arm against the joint to control or submit."},{"num":6,"name":"Breaking Ground Strangles x 3","desc":"Three escapes from common ground strangles. Focuses on protecting the airway, breaking grips at the weakest point, and turning to recover guard or stand up."},{"num":7,"name":"Arm Locks from a Standing Position - Falcon Arm Lock / Strike Down to the Head","desc":"A standing falcon arm lock applied as a counter to a downward strike. You intercept the attacking arm, secure the wrist, and apply pressure across the elbow joint to control."},{"num":8,"name":"Arm Locks from a Standing Position - Bent Arm Lock / Punch to the Face","desc":"A standing bent-arm lock applied against a punch to the face. You parry the punch, control the wrist, fold the arm at the elbow, and lever it upwards behind their back."},{"num":9,"name":"Arm Locks from a Standing Position - Advanced Double Straight Arm Lock / Punch to the Stomach","desc":"An advanced lock against a stomach punch where both of the opponent's arms are controlled and straightened. The double-arm control denies escape options whilst pressure is applied to the elbows."},{"num":10,"name":"Reclining Leg Throw - From Inside Block","desc":"A reclining leg throw (Tomoe Nage style) entered from an inside block. You drop onto your back, plant a foot in the opponent's hip, and propel them over you in a sacrifice throw."},{"num":11,"name":"Reclining Leg Throw - From Cross Block","desc":"The same reclining leg throw entered from a cross block. The cross block sets up the angle, then you drop, plant the foot in the hip, and throw the opponent overhead."},{"num":12,"name":"Wrist Throw with Lock - Defence against a Knife Attack / Strike to the Stomach","desc":"A wrist throw used to defend a stomach-line knife attack. You redirect the blade off your centre line, secure the wrist, apply the throw, and finish with a wrist lock on the floor."},{"num":13,"name":"Wrist Throw with Lock - Defence against a Stick / Baton / Side Strike to the Head","desc":"A wrist throw against a side strike with a stick or baton. You enter inside the swing, control the weapon arm, throw using wrist rotation, and lock the wrist on landing."},{"num":14,"name":"Wrist Throw with Lock - Right Hand Punch to Stomach","desc":"A wrist throw applied to a right-handed stomach punch. You parry, capture the punching wrist, twist outwards to off-balance, throw, and finish with a wrist lock to control the opponent."},{"num":15,"name":"Demonstrate Shoulder Locks - Back Strangle","desc":"A shoulder lock applied in combination with a back strangle. You take the back, secure the strangle for control, then isolate the arm and apply a shoulder lock for the finish."},{"num":16,"name":"Demonstrate Shoulder Locks - Right Hand Punch (to the stomach)","desc":"A shoulder lock applied as a counter to a right-handed stomach punch. You deflect the punch, trap the arm, and lever it against the shoulder joint to submit or control."},{"num":17,"name":"Pad Work – Scissor Kicks / Side Thrust Kicks (left/right) x 5","desc":"Pad-based conditioning drilling scissor kicks and side thrust kicks, five repetitions on each side. Builds power, accuracy, and the ability to chain kicking combinations under fatigue."},{"num":18,"name":"Yellow Belt Kata","desc":"The set kata for yellow belt. A choreographed sequence of techniques demonstrated solo, showing fluency in stances, blocks, strikes, and kicks at the level expected for yellow."}],"Orange":[{"num":1,"name":"Rice Bail Throw","desc":"A throw (Tawara Gaeshi) where you grip the opponent low — as if lifting a heavy bale of rice — drop backwards, and use their momentum to flip them overhead in a sacrifice throw."},{"num":2,"name":"Variation on Body Drops - From Right Punch to the Face","desc":"A body drop (Tai Otoshi) entered against a right punch to the face. You parry the punch, step across to block the opponent's leg, and drop them forwards over the trip."},{"num":3,"name":"Variation on Body Drops - From a Kick / Right Punch to the Face","desc":"A body drop entry from a kick combined with a right face punch. You evade the kick, intercept the punch, plant the blocking leg, and throw forwards over the obstruction."},{"num":4,"name":"Variation on Body Drops - From Rear Neck Grab / Behind","desc":"A body drop applied when grabbed at the back of the neck from behind. You break posture, step across to block their leg, and drop them forwards using their grip as your handle."},{"num":5,"name":"Half Shoulder Throw - From Inside Block / Half Shoulder Throw - Back Fist then Throw","desc":"A half shoulder throw (Seoi Otoshi) set up by an inside block, or alternatively by a back fist before the throw. You take the arm under your shoulder and drop them forwards."},{"num":6,"name":"From Cross Block / Back Fist then Throw","desc":"A throw entered from a cross block or after a back fist strike. The block or strike disrupts the opponent, creating the gap to load them for the shoulder-line throw."},{"num":7,"name":"Leg Throw with Locks - Pressure Point","desc":"A leg throw combined with a pressure point application. You sweep or reap the leg whilst applying pain at a pressure point to compromise structure and ensure the throw lands cleanly."},{"num":8,"name":"Leg Throw with Locks - Figure Four Leg Lock","desc":"A leg throw transitioning into a figure-four leg lock on the ground. After the throw, you wrap your legs in a figure four around theirs and apply twisting pressure to the knee or ankle."},{"num":9,"name":"Leg Throw with Locks - Leg Reap","desc":"A leg-reaping throw (Osoto Gari style) where you sweep their supporting leg out from under them whilst driving their upper body backwards, finishing with a leg lock on the floor."},{"num":10,"name":"Back Hammer Lock - From Left Punch to Stomach","desc":"A back hammer lock applied against a left punch to the stomach. You parry the punch, capture the arm, rotate it behind their back, and lever it upwards to control."},{"num":11,"name":"Back Hammer Lock - From Right Punch to Stomach","desc":"The same back hammer lock applied to a right-handed stomach punch. The mechanics mirror the left-handed version: parry, capture, rotate the arm behind, and apply upward leverage."},{"num":12,"name":"Back Hammer Lock - From Rear Neck Grab / Behind","desc":"A back hammer lock applied when the opponent grabs the back of your neck. You secure their arm, pivot out from under the grab, and rotate their arm into the hammer lock position."},{"num":13,"name":"Orange Belt Kata & Application","desc":"The set kata for orange belt, demonstrated solo, alongside a partnered application showing how the kata's techniques translate into realistic defensive sequences."}],"Green":[{"num":1,"name":"1 Hold Down with Double Arm Lock / Hip Throw 1","desc":"A combination sequence where you execute a hip throw and transition on the ground into a hold-down position that simultaneously applies a double arm lock — controlling both of the opponent's arms whilst pinning their torso."},{"num":2,"name":"Variation on Shoulder Throws - Dropping Version of Full Shoulder","desc":"A full shoulder throw executed with a dropping motion, taking both knees to the ground to throw a taller or heavier opponent. The drop generates force without needing to outlift them."},{"num":3,"name":"Variation on Shoulder Throws - Half Shoulder","desc":"A shoulder throw where the attacker's arm passes under your armpit rather than over your shoulder. Often known as Seoi Otoshi or half-shoulder carry, useful against taller opponents."},{"num":4,"name":"Variation on Shoulder Throws - Lapel Shoulder Throw","desc":"A shoulder throw using a grip on the opponent's lapel to generate the loading and rotation. The lapel grip controls posture and creates the off-balance needed for the throw."},{"num":5,"name":"Knee Wheel - From Right Punch","desc":"A throw where you sweep or block the opponent's knee whilst rotating their upper body, causing them to wheel around a pivot point at their knee. Entered by intercepting a right punch."},{"num":6,"name":"Knee Wheel - Advanced (Right Punch)","desc":"An advanced knee wheel where you step parallel to the attacker and use your outside leg to reap their inside leg from behind the knee, combining a sweep with the upper-body rotation."},{"num":7,"name":"Knee Wheel - From a 1 Hand Neck Grab / Behind","desc":"A knee wheel applied as a counter to a single-handed grab on the back of your neck. You break posture, control the gripping arm, and throw using the knee-pivot mechanic."},{"num":8,"name":"Two Methods of an Escape when Held - Under Arm from the Back x 2","desc":"Two escapes from a bear-hug style hold where the attacker grabs from behind with their arms under yours, leaving your arms free. Methods focus on hip drops, elbow strikes, and base breaking."},{"num":9,"name":"Two Methods of an Escape when Held - Over Arm from the Back x 2","desc":"Two escapes from a rear bear hug where the attacker pins your arms by gripping over them. Methods focus on creating space at the hips, dropping weight, and stepping out for leverage."},{"num":10,"name":"Two Methods of an Escape when Held - Under Arm from the Front x 2","desc":"Two escapes from a front bear hug with your arms free. Methods include strikes to vital points, head control, hip thrusts to break grip, and transitions to a counter-throw."},{"num":11,"name":"Two Methods of an Escape when Held - Over Arm from the Front x 2","desc":"Two escapes from a front bear hug where your arms are pinned. Methods focus on dropping weight, expanding the chest, breaking the grip at its weakest point, and following with a strike or throw."},{"num":12,"name":"Demonstrate how to Apply Bar Choke - From Left Side","desc":"A choke applied by driving your forearm across the throat like a bar, compressing the airway or carotid arteries. Demonstrated entering from the left side."},{"num":13,"name":"Demonstrate how to Apply Bar Choke - From Right Side","desc":"The same bar choke applied entering from the right side. The forearm is driven across the throat and the opposite hand secures the position to apply the squeeze."},{"num":14,"name":"Stamp Throw - From a Left / Right Punch","desc":"Useful when resisting a traditional hip throw, a forceful entry into a takedown where you literally 'stamp' your foot to gain leverage, off-balance your opponent, or clear their leg. Applied from a left or right punch combination."},{"num":15,"name":"Stamp Throw - Back Strangle","desc":"A stamp throw transitioning from controlling the neck with a back strangle into the takedown. The strangle compromises balance; the stamp finishes the throw."},{"num":16,"name":"Stamp Throw - From Rear Neck Grab / Behind","desc":"A stamp throw applied as a counter to a neck grab from behind. You break the grip, pivot, and stamp through the opponent's base to take them down."},{"num":17,"name":"Transitional Hip Throw (from a left / right punch)","desc":"A hip throw entered from a transition — meaning you move through another technique or off-balance first, rather than a direct entry. Applied against a punch combination."},{"num":18,"name":"Drawing Ankle (from a right lunge punch)","desc":"A throw, often known as an ankle pick, where you reach down and 'draw' or scoop the opponent's ankle towards you whilst driving their upper body backwards. Applied against a committed right lunge punch."},{"num":19,"name":"Crab Claw Scissors Throw / Backwards","desc":"A sacrifice throw where you fall backwards whilst scissoring your legs around the opponent's leg(s) — your legs resembling a crab's claw closing around them — taking them down with you."},{"num":20,"name":"Front Scissors Throw / Forwards","desc":"The forward counterpart to the Crab Claw — a scissoring leg-take-down executed moving forward, trapping the opponent's leg between yours and forcing them down."},{"num":21,"name":"Sweeping Loin","desc":"A hip throw (Harai Goshi) where, instead of purely lifting the opponent on your hip, you sweep their leg away with your loaded leg whilst rotating — combining a sweep and a hip throw."},{"num":22,"name":"REVISION - Straight Arm Lock","desc":"Revisiting a straight arm bar. Reinforces the foundational mechanics of isolating the arm, hyperextending the elbow, and controlling posture during application."},{"num":23,"name":"REVISION - Shoulder Locks","desc":"Revisiting variations on shoulder locks from earlier syllabus levels. Reinforces grip control, fulcrum placement, and the difference between control and submission applications."},{"num":24,"name":"REVISION - Recumbent Ankle Lock","desc":"Revisiting a recumbent (lying-down) ankle lock. Reinforces the leg position, the trapping mechanism, and the squeeze applied across the ankle joint."},{"num":25,"name":"REVISION - Number One White Belt Combo","desc":"The foundational combination from white belt syllabus, demonstrated to show continued fluency in basics. Reinforces that advanced practice rests on first-principles competence."}],"Blue and White":[{"num":1,"name":"Variation On Strangle Holds In Kata Form","desc":"A kata-form sequence demonstrating variations on strangle holds. Performed solo or with a compliant partner to show fluency in entries, grip transitions, and the mechanical principles behind each strangle."},{"num":2,"name":"Loin/Hip Wheel x 3 (From Right Punch, From Rear Neck Grab / Behind, Left / Right Punch)","desc":"Three entries to the loin or hip wheel throw (Koshi Guruma), where you wheel the opponent over your hip using a head-and-arm grip. Practised against a right punch, a rear neck grab, and a punch combination."},{"num":3,"name":"Scissors And Naked Choke Hold x 3 (From Right Punch, From Right Punch / Left Punch, From A 1 Hand Neck Grab / Behind)","desc":"Three entries combining a scissors takedown with a naked choke (Hadaka Jime). You scissor the opponent down, secure rear position, and apply the choke. Drilled against a punch, a punch combination, and a rear neck grab."},{"num":4,"name":"Escape From A Head Chancery x 3 (From Left Side From Right Side from the Front)","desc":"Three escapes from a head chancery — a side headlock controlling your neck. Methods cover left side, right side, and front variations, focusing on posture recovery, base attacks, and counter-throws."},{"num":5,"name":"Variation on Holding Down x 2 (A. Jacket Grab/Faulken Arm Lock; B. Carotid Artery Strangle/Choke)","desc":"Two hold-down variations applied after a takedown. Variation A combines a jacket grip with a falcon arm lock; variation B applies a carotid artery strangle whilst pinning the torso, controlling and submitting from the same position."},{"num":6,"name":"Spring Hip Throw x 2 (Low / High)","desc":"Two versions of the spring hip throw (Hane Goshi), where the springing leg lifts the opponent rather than purely the hip rotation. Practised low (against shorter or heavier opponents) and high (against taller opponents)."},{"num":7,"name":"Back Kicks (Right / Left Legs) x 5","desc":"Five repetitions of the back kick (Ushiro Geri) on each leg. Drives the heel directly behind through the target with the hip, used for defending against attackers approaching from the rear."},{"num":8,"name":"Right Kick followed by Left Roundhouse x 5","desc":"A two-kick combination drilled five times: a right-leg kick followed immediately by a left-leg roundhouse. Trains kicking off both sides without resetting stance, building fluency in linked kicking sequences."},{"num":9,"name":"Right / Left Punch into Right Elbow x 5","desc":"A combination drilled five times: a right punch, a left punch, then a right elbow strike. Trains the transition from striking range into close range, where the elbow becomes the primary weapon."},{"num":10,"name":"Left / Right Punch into Roundhouse x 5","desc":"A combination drilled five times: a left punch, a right punch, then a roundhouse kick. Trains the chaining of hand strikes into a follow-up kick, exploiting the opponent's reaction to the punches."},{"num":11,"name":"Right Front Thrust Kicks x 5","desc":"Five repetitions of the right front thrust kick (Mae Geri Kekomi), driving the heel forward through the target rather than snapping the toes up. Used for stopping attackers and creating distance."},{"num":12,"name":"Left Front Thrust Kicks x 5","desc":"Five repetitions of the left front thrust kick. The same mechanic on the other side, building symmetry so the kick is available regardless of which leg is leading."},{"num":13,"name":"Fitness Work (150 Punches / 150 Kicks) 3 minutes","desc":"A timed conditioning round of 150 punches and 150 kicks completed within three minutes. Builds the cardiovascular base and technique-under-fatigue needed for the demands of higher-belt syllabus work."}],"Blue":[{"num":1,"name":"Front Scoop Throw (take one leg) From Front x 3","desc":"Three repetitions of a front scoop throw, where you drop low, scoop one of the opponent's legs at the knee or thigh, and lift to take them down. Entered from a frontal engagement."},{"num":2,"name":"Dropping Version of a Body Drop x 3","desc":"Three repetitions of the dropping body drop (Tai Otoshi) where you take both knees to the floor whilst executing the throw. The drop generates the leverage needed against larger opponents."},{"num":3,"name":"Knife Defences x 3 (Throat, Side Neck, Rear Neck)","desc":"Three knife defences against attacks targeting the throat, side of the neck, and rear of the neck. Each focuses on redirecting the blade off the centre line, controlling the weapon arm, and disarming."},{"num":4,"name":"Rear Scoop Throw x 3 (take one leg) From Behind","desc":"Three repetitions of the rear scoop throw, applied when you have taken the opponent's back. You scoop one of their legs from behind, lifting and rotating to take them to the floor."},{"num":5,"name":"Variation on Holding Down x 2 (A. Sweeping Loin/Shoulder Pin; B. Hip Throw/Reverse Shoulder Pin)","desc":"Two combinations linking a throw with a hold-down. Variation A pairs a sweeping loin with a shoulder pin; variation B pairs a hip throw with a reverse shoulder pin, securing control immediately on landing."},{"num":6,"name":"Outside Forearm Block followed by Elbow to the Ribs x 3","desc":"Three repetitions of an outside forearm block deflecting an incoming punch, followed by stepping in to deliver an elbow strike to the ribs. Trains the block-to-counter transition at close range."},{"num":7,"name":"Downward inside Forearm Block followed by Punch L/R x 3","desc":"Three repetitions of a downward inside forearm block — used against low or middle attacks — followed by a left and right punch combination. Trains turning a block into immediate counter-strikes."},{"num":8,"name":"Front Strangle into Straight Arm Lock into Shoulder Lock","desc":"A three-stage submission chain: secure a front strangle, transition to a straight arm lock as they defend, then progress to a shoulder lock. Each stage flows from the opponent's predictable defensive reaction to the previous lock."},{"num":9,"name":"Back Strangle into Elbow Lock into Double Straight Arm Lock","desc":"A three-stage submission chain from the back: apply a back strangle, transition to an elbow lock as they fight the strangle, then progress to a double straight arm lock controlling both arms."},{"num":10,"name":"Counter measures against Garrotting x 4 (Front x 2, Back x 2)","desc":"Four counters to garrotting attacks — two from the front and two from behind. Focuses on protecting the airway, attacking the attacker's hands or balance, and disengaging safely from the cord or wire."},{"num":11,"name":"Roundhouse Kick whilst Walking x 4","desc":"Four roundhouse kicks delivered whilst moving forward in a walking step pattern. Builds the ability to throw kicks in motion rather than from a static stance, mimicking realistic combat footwork."},{"num":12,"name":"Fitness Work (200 Punches / 200 Kicks) 3 minutes","desc":"A timed conditioning round of 200 punches and 200 kicks within three minutes. Increases volume from the previous belt's standard, demanding higher work rate and improved cardiovascular efficiency."}],"Purple and White":[{"num":1,"name":"Sleeper Hold from a Chancery Left / Right Sides","desc":"A sleeper hold (carotid restraint) applied after entering from a side headlock chancery. Practised on both left and right sides, transitioning from the headlock control into the rear-naked-choke style finish."},{"num":2,"name":"Indian Death Lock x 3 (After Hip Throw, After Rear Neck Grab, From Right Cross Block)","desc":"Three entries to an Indian death lock — a leg-entanglement submission attacking the knees and ankles. Drilled after a hip throw, after countering a rear neck grab, and from a right cross block."},{"num":3,"name":"Breaking Ground Strangles 7 (Stomach x 3, Side x 1, Between Legs x 2, Back of Head x 1)","desc":"Seven escapes from ground strangles applied from different positions: three from stomach, one from the side, two from between the legs, and one from the back of the head. Builds a comprehensive escape vocabulary."},{"num":4,"name":"Variation of Full Shoulder x 3 (Dropping Version, Left/Right Punch, Advanced)","desc":"Three variations of the full shoulder throw (Ippon Seoi Nage): a dropping version taking knees to the ground, an entry from a punch combination, and an advanced variation with refined grip and rotation."},{"num":5,"name":"Kicking Kata (first eight)","desc":"The first eight techniques of the kicking kata — a choreographed solo sequence demonstrating kicking variations, transitions, and footwork. Tests fluency in delivering kicks in pre-set patterns under control."},{"num":6,"name":"Side Thrust Kicks x 3 (Followed By Back Fist To Face)","desc":"Three repetitions of a side thrust kick followed immediately by a back fist to the face. Trains chaining a powerful kick into a hand strike as the opponent reacts to the kick."},{"num":7,"name":"V-Block (throw)","desc":"A throw set up by a V-block, where both forearms form a V-shape to deflect an incoming attack. The block flows into a takedown using the opponent's redirected momentum."},{"num":8,"name":"Advanced Rice Bail Throw","desc":"An advanced version of the rice bail throw (Tawara Gaeshi) with refined timing, grip, and rotation. The throw is taken from less optimal positions or against more resistant opponents than the basic version."},{"num":9,"name":"Basic Blocks / Strikes (kata form)","desc":"A kata-form demonstration of the basic blocks and strikes from the foundational syllabus. Tests that the fundamentals remain technically clean and powerful even at an advanced grading level."},{"num":10,"name":"Escape from Hair Grabs x 2 (Front, Back)","desc":"Two escapes from hair grabs — one from the front and one from behind. Methods focus on trapping the gripping hand to prevent further damage, breaking the grip, and following up with a counter-attack."},{"num":11,"name":"Pressure Point / Atemi Strikes (Temple, Nose, Carotid, Sciatic, Mastoid, Zygomatic, Throat, Clavicle, Groin, Madula)","desc":"Atemi strikes targeting ten specific anatomical points: temple, nose, carotid artery, sciatic nerve, mastoid process, zygomatic arch, throat, clavicle, groin, and medulla. Demonstrates precision targeting and the underlying anatomical knowledge."},{"num":12,"name":"Revision (Back Strangle x 4, Reclining Leg Throw, Reverse Reclining Leg Throw)","desc":"Revision of earlier syllabus material: four back strangle variations, the reclining leg throw, and its reverse counterpart. Demonstrates that foundational material is retained at a high level of fluency."},{"num":13,"name":"Fitness Work (250 Punches / 250 Kicks) 4 minutes","desc":"A timed conditioning round of 250 punches and 250 kicks within four minutes. Continues the progressive volume increase, demanding sustained pace and clean technique under significant fatigue."}],"Purple":[{"num":1,"name":"Head Hip Knee Left / Right Side","desc":"A throw using sequential contact at the head, hip, and knee — three points of control to off-balance and take the opponent down. Drilled on both left and right sides for symmetry."},{"num":2,"name":"Shoulder Wheel","desc":"The shoulder wheel throw (Kata Guruma), where you load the opponent across both shoulders — like a fireman's carry — then rotate them over and down. A throw of mechanical advantage rather than strength."},{"num":3,"name":"Counter to Bar Chokes x 2","desc":"Two counters to bar chokes — where the attacker drives a forearm across the throat. Methods cover relieving the pressure, attacking the structure of the choking arm, and turning the attacker's commitment into your throw or lock."},{"num":4,"name":"Outer Hock Throw x 2","desc":"Two variations of the outer hock throw, where you reap the opponent's leg from the outside whilst driving their upper body backwards. Often known as Osoto Gari — a foundational throw with many applications."},{"num":5,"name":"Counter to an Arm Lock x 3 (Knee Wheel, Hip Throw, Reverse Cross Hock)","desc":"Three counters to an arm lock attempt: a knee wheel, a hip throw, and a reverse cross hock. Each turns the opponent's commitment to the lock into a throw, exploiting their forward weight distribution."},{"num":6,"name":"X-block Pull Down Knee Elbow Into x 3 (Rear Scoop, Rice Bail Throw / Guillottine)","desc":"Three follow-ups from an X-block pull-down with knee and elbow strikes: a rear scoop throw, a rice bail throw, and a guillotine. The X-block opens the opponent's guard, enabling the entry."},{"num":7,"name":"Roundhouse Kick to Kidneys x 4","desc":"Four roundhouse kicks targeted to the kidney area. Tests precision targeting on a vulnerable anatomical point, with the kick angled around the opponent's defending arm into the lower-back region."},{"num":8,"name":"Downward Inside Block to Straight Arm Lock Into (Bent Arm / Lock, Wrist Lock / Throw)","desc":"A flow drill: downward inside block leads into a straight arm lock, then transitions to either a bent arm lock or a wrist lock with throw. Trains submission chaining from a single defensive entry."},{"num":9,"name":"Front Kick followed by Side Kick x 2","desc":"A two-kick combination drilled twice: a front kick followed immediately by a side kick. Trains the transition between two different kicking lines without resetting, exploiting the opponent's response to the first kick."},{"num":10,"name":"When Held by Both Wrists from Behind x 3 (Elbow Lock, Body Drop, Arm Shoulder Throw / Minor Lock)","desc":"Three responses when held by both wrists from behind: an elbow lock, a body drop, and an arm-shoulder throw with a minor lock finish. Each exploits the attacker's commitment to the wrist grip."},{"num":11,"name":"Revision (Hip Throw / Cross Over Arm Lock, Tying your Obi, Breaking from Strangles x 4, Fitness Work)","desc":"Revision of earlier material: hip throw with cross-over arm lock, correctly tying the obi (belt), four strangle escapes, and fitness work. Demonstrates retained fluency in foundational material at this level."},{"num":12,"name":"Move 12","desc":""}],"Brown and White":[{"num":1,"name":"Advanced Inside Hock","desc":"An advanced version of the inside hock throw (Ouchi Gari), where you hook the opponent's inner leg with your foot whilst driving them backwards. The advanced variation refines the timing, depth, and finishing position."},{"num":2,"name":"Shoulder Dislocations (in Kata form)","desc":"A kata-form demonstration of techniques targeting the shoulder joint to cause dislocation. Performed in controlled sequence with a compliant partner, showing the mechanical principles and entry points."},{"num":3,"name":"Side Thrust Kick to the Kneecap / Roundhouse Kick / Ribs x 5","desc":"A five-repetition kicking combination: a side thrust kick to the kneecap to compromise the opponent's base, followed by a roundhouse kick to the ribs to exploit the broken posture."},{"num":4,"name":"Valley Drop Throw x 2 (Right Hand Punch, Arm Drag)","desc":"Two entries to the valley drop throw (Tani Otoshi), a sacrifice throw where you drop into the gap beside the opponent to take them down with you. Practised against a right punch and from an arm drag."},{"num":5,"name":"Variation on Leg Sweeps (Loin, Thigh / Knee, Ankle)","desc":"Variations on leg sweeps targeting three different points: the loin (hip area), the thigh and knee, and the ankle. Each height of sweep exploits a different element of the opponent's structure."},{"num":6,"name":"Front Snap Kick (to lymph gland)","desc":"A front snap kick (Mae Geri Keage) targeted at the lymph gland under the jaw. Tests precision in delivering a fast snapping kick to a small high-line target rather than the more common body-line target."},{"num":7,"name":"Left Inside Forearm Block Pull Down to Knife Hand","desc":"A left inside forearm block deflecting an incoming attack, transitioning into a pull-down on the opponent's arm and finishing with a knife-hand strike. A single flowing defensive sequence."},{"num":8,"name":"Upward Kick to the Kneecap using the Heel","desc":"A rising kick driving the heel upward into the opponent's kneecap. Used at very close range where conventional kicks would not generate enough space, and effective at compromising the opponent's structure."},{"num":9,"name":"Roundhouse Kick to Solar Plexus","desc":"A roundhouse kick targeting the solar plexus — the nerve cluster below the sternum. A precision target that disables an opponent through diaphragm shock, demanding accurate height and angle."},{"num":10,"name":"Short Stick Application x 3","desc":"Three applications of techniques using a short stick (hanbo or similar). Covers strikes, locks, and takedowns where the stick acts as a force multiplier or a fulcrum for joint manipulation."},{"num":11,"name":"Five Ways of Throwing your Attacker from Behind","desc":"Five distinct throws applied when you have taken the opponent's back. Demonstrates a varied vocabulary from a position of advantage, rather than relying on a single signature technique."},{"num":12,"name":"Escape from a Full Nelson x 2","desc":"Two escapes from a full nelson — where the attacker has both arms threaded under yours and locked behind your neck. Methods focus on dropping weight, attacking grip integrity, and creating space to turn out."},{"num":13,"name":"Fitness Work (300 Punches / 300 Kicks / 100 Knees / 100 Elbows / 100 Press Ups) 7 minutes","desc":"A timed conditioning round across multiple weapon categories: 300 punches, 300 kicks, 100 knees, 100 elbows, and 100 press-ups within seven minutes. Tests sustained output across the full striking arsenal."}],"Brown":[{"num":1,"name":"Rolling Ankle","desc":"A rolling ankle technique — a sacrifice throw or takedown where you drop and roll whilst attacking the opponent's ankle, taking them down through the joint compromise rather than the rotation alone."},{"num":2,"name":"Leg Wheel (take both legs)","desc":"A leg wheel throw (Ashi Guruma style) where you take both of the opponent's legs simultaneously, wheeling them around your stationary base. Distinct from single-leg variations by the simultaneous double-leg action."},{"num":3,"name":"Wall Defences x 3","desc":"Three defences for use when pinned against a wall. Methods cover redirecting the attacker, exploiting the wall as leverage rather than a disadvantage, and creating space to disengage or counter-attack."},{"num":4,"name":"Outer Wind x 2 (Right Hand Punch, Left / Right Punch)","desc":"Two entries to the outer wind throw (Soto Maki Komi style), where you wrap around the opponent's arm and roll them over. Practised against a single right punch and a left-right punch combination."},{"num":5,"name":"Inside Wind x 2 (Right Hand Punch, Right Cross Block / Half Shoulder)","desc":"Two entries to the inside wind throw — the inside-line counterpart to the outer wind. Practised against a right punch and from a right cross block leading into a half shoulder entry."},{"num":6,"name":"Dropping Version of a Reverse Body Drop (Right Hand Punch, Rear Neck Grab / Behind)","desc":"A dropping reverse body drop (Ura Tai Otoshi style), where you take both knees to the floor whilst executing the reverse-direction throw. Practised against a right punch and against a rear neck grab."},{"num":7,"name":"Three Block using the Same Arm (Left Side x 5, Right side x 5)","desc":"Three different blocks executed in sequence using the same arm without resetting. Drilled five times on the left and five times on the right. Tests the ability to defend multiple lines from a single side."},{"num":8,"name":"Shoulder Crash x 2 (Front, Rear)","desc":"Two shoulder crash entries — driving your shoulder into the opponent's centre to disrupt structure. Practised from the front and rear. Often used as a setup before a throw or to break a static defence."},{"num":9,"name":"Three One Handed Throws (Reclining Leg Throw, Inside Hock, Front Scissors)","desc":"Three throws executed with only one hand on the opponent: the reclining leg throw, the inside hock, and the front scissors. Tests refined timing and balance disruption when grip-based throws are not available."},{"num":10,"name":"Escape from a Double Wrist Grab Front (Wrist Lock / Elbow Lock, Wrist Lock / Elbow Lock / Throw)","desc":"Two escapes when both wrists are grabbed from the front: the first finishes with a wrist lock and elbow lock; the second extends the same chain into a throw, taking the attacker down rather than just controlling."},{"num":11,"name":"Escape from Single Wrist Grab (Wrist Releaser / Elbow Lock / Take Down in Arm & Shoulder Lock)","desc":"An escape from a single wrist grab using a wrist releaser, transitioning to an elbow lock, and finishing with a takedown into a combined arm-and-shoulder lock. A single fluid sequence with multiple submission stages."},{"num":12,"name":"Palm Heel Strikes to Body / Attacking / Defending x 5","desc":"Five repetitions of palm heel strikes to the body in both attacking and defending contexts. The palm heel offers strike power without the wrist injury risk of a closed fist, useful at close range."},{"num":13,"name":"Indian Death Lock (with your legs)","desc":"An Indian death lock applied entirely with your legs — entangling the opponent's legs in a figure-four with no need for hand control. A higher-level variation demonstrating leg dexterity and submission depth."},{"num":14,"name":"Rear Throw","desc":"A throw applied when attacking the opponent from behind. The exact mechanic depends on body position — typically a backward sacrifice or rear-line takedown using the opponent's hips as the lever point."},{"num":15,"name":"Right Hand Push Left Punch into Full Shoulder into Defence against a Kick (sweep leg)","desc":"A combination flow: a right-hand push deflects, a left punch lands, the punch transitions into a full shoulder throw, and as the opponent recovers with a kick you sweep their supporting leg."},{"num":16,"name":"Right Hand Push Left Punch into a Full Shoulder into Defence against Punch to the Stomach (straight arm lock)","desc":"The same opening combination — right-hand push, left punch, full shoulder throw — but the follow-up defends against a stomach punch by applying a straight arm lock as the opponent rises and attacks."},{"num":17,"name":"Two Variation on Hold Down Kata (from a hip throw) - Detailed Kata One & Kata Two sequences","desc":"Two detailed kata sequences demonstrating hold-down variations entered from a hip throw. Kata One and Kata Two each show distinct grip configurations, transitions, and finishing positions with a compliant partner."},{"num":18,"name":"Knife Hand to Neck with Kick to Solar Plexus x 5","desc":"Five repetitions of a combination: a knife-hand strike to the neck followed by a kick to solar plexus. Trains hand-to-foot coordination targeting two precision anatomical points in sequence."},{"num":19,"name":"Escape from a Half Nelson (from 2 variations) x 2 (Rear x 2, Side x 2)","desc":"Escapes from a half nelson — where the attacker threads one arm under yours and behind your neck. Two variations from rear application and two from side application, totalling four distinct escapes."},{"num":20,"name":"Sparring / Attacking / Defending (optional) (3 minutes)","desc":"An optional three-minute sparring round covering both attacking and defending roles. Tests the ability to apply syllabus material under live, resisting conditions rather than in pre-arranged drills."},{"num":21,"name":"Fitness (7 minutes): 500 Punches / 500 Kicks / 100 Press Ups (Knuckles / Hands / Finger Tips)","desc":"A seven-minute conditioning round: 500 punches, 500 kicks, and 100 press-ups performed across three hand positions — knuckles, palms, and fingertips. Builds wrist and hand conditioning alongside cardiovascular work."}],"Black Belt":[{"num":2,"name":"Counter to Throws all x 3 (Hip Throw, Full Shoulder, Back Arm and Collar Hold, Shoulder Wheel)","desc":"Three counters for each of four major throws: hip throw, full shoulder, back arm and collar hold, and shoulder wheel. Tests the ability to neutralise and reverse a committed throw at the highest grading level."},{"num":3,"name":"Knife Hand Kata","desc":"A kata-form sequence built around the knife-hand strike (Shuto). Demonstrates the knife hand applied as block, strike, redirect, and grip, showing the full vocabulary of one of jiu-jitsu's most versatile hand positions."},{"num":4,"name":"15 Combination Throws (Rice Bail, Outer Wind, Inner Wind, Stamp Throw, Sweeping Loin, Leg Throw, Front Scissor, etc.)","desc":"Fifteen combination throws demonstrated in flowing sequence: rice bail, outer wind, inner wind, stamp throw, sweeping loin, leg throw, front scissor, and others. Tests fluency in linking throws as one threatens and the next finishes."},{"num":5,"name":"Lunge Punch Reverse Punch to Body & Face x 3","desc":"Three repetitions of a lunge punch (Oi Tsuki) followed by a reverse punch (Gyaku Tsuki) targeting body and face alternately. Tests power, accuracy, and the ability to chain stepping and stationary punches."},{"num":6,"name":"Black Belt Kata","desc":"The set kata for black belt — the most demanding choreographed sequence in the syllabus. Demonstrates the highest level of fluency, power, precision, and timing across the full vocabulary of techniques."},{"num":7,"name":"Right Cross Block / Inside Block followed by Right Back Fist and Throw x 4","desc":"Four repetitions of a right cross block or inside block, followed by a right back fist strike, flowing into a throw. Tests the chaining of block, strike, and throw at speed against a committed attack."},{"num":8,"name":"Defence against Kicks (Front, Roundhouse, Back x 4)","desc":"Four defences against each of three kick types: front kick, roundhouse, and back kick. Twelve defences in total, demonstrating a comprehensive vocabulary against the major kicking lines."},{"num":9,"name":"One Handed Throat Throw x 2","desc":"Two variations of a one-handed throat throw — typically a guillotine-style takedown using only the throat-controlling arm. The single-hand application demands precise timing and balance disruption."},{"num":10,"name":"Attacking the Eyes and Ears","desc":"Techniques targeting the eyes and ears as final-resort or extreme-self-defence applications. Demonstrates the targeting and the mechanical principles whilst acknowledging the legal and ethical seriousness of these attacks."},{"num":11,"name":"Using a X-Block to stop a Strike to the Head from a Baton","desc":"An X-block defence — both forearms crossed in an X — used to stop a downward baton strike to the head. The X-block absorbs the impact whilst trapping the weapon for follow-up control or disarm."},{"num":12,"name":"Short Stick Application x 6","desc":"Six applications using a short stick: covering strikes, joint locks, restraint techniques, and defensive uses. Demonstrates the stick as both weapon and leverage tool across diverse engagement scenarios."},{"num":13,"name":"Kicking Kata (16)","desc":"The full sixteen-technique kicking kata — the complete sequence rather than the partial version examined at earlier belts. Tests the entire kicking vocabulary in a single uninterrupted demonstration."},{"num":14,"name":"The Knife Hand & Its Uses (Kata Form)","desc":"A kata-form exposition of the knife hand and all its applications: as a striking weapon, a blocking surface, a redirect, and a grip. Demonstrates depth of understanding of a single tool."},{"num":15,"name":"The Elbow & Its Uses (Kata Form)","desc":"A kata-form exposition of the elbow and all its applications: strikes from multiple angles, blocks, traps, and use as a control point in close-range work. Demonstrates depth of understanding of the elbow."},{"num":16,"name":"The Bottom Fist & Its Uses (Kata Form)","desc":"A kata-form exposition of the bottom fist (Tetsui) and all its applications: hammering strikes, blocks at unusual angles, and close-range smashing techniques. Demonstrates depth of understanding of an often-overlooked weapon."},{"num":17,"name":"The Students Opinion of the Four Most Dangerous Throws","desc":"An assessed verbal or written component where the student presents their reasoned opinion on the four most dangerous throws in the syllabus. Tests analytical understanding rather than physical execution."},{"num":18,"name":"The Punches to Body / Face/ Body (full power no contact)","desc":"Punches delivered to body and face targets at full power but pulled to no contact. Tests the ability to generate maximum power with maximum control — a core black-belt skill in any martial art."},{"num":19,"name":"Right Left Upward Rising Block & Throw x 4","desc":"Four repetitions of a right-then-left upward rising block (Age Uke) flowing immediately into a throw. Tests the conversion of a defensive block into an offensive takedown without intermediate transition."},{"num":20,"name":"Left Handed Throws (opposite stance)","desc":"Throws executed from the opposite stance — with the left side leading. Tests symmetry and the ability to apply the syllabus from either side rather than relying on a dominant lead."},{"num":21,"name":"Sparring (2 x 1 minute rounds)","desc":"Two one-minute sparring rounds. At black-belt level, sparring tests the integrated application of the entire syllabus under live, resisting conditions, with emphasis on control and technical precision."},{"num":22,"name":"Fitness (500 Punches / 500 Kicks in under 8 minutes)","desc":"A timed conditioning round of 500 punches and 500 kicks completed within eight minutes. Demonstrates that the candidate maintains the cardiovascular and technical base required of a black belt."},{"num":23,"name":"General Anatomy Written Test","desc":"A written assessment of general anatomy — covering bones, joints, major muscle groups, nerve and pressure points relevant to martial application. Tests theoretical knowledge underpinning practical technique."},{"num":24,"name":"20 Hours Teaching","desc":"A logged twenty hours of teaching time, demonstrating the candidate's ability to communicate the syllabus to others. Recognises that black belt brings responsibility for transmission as well as personal performance."},{"num":25,"name":"Revision (Knife Defences, Back Strangles, Full Nelson, Half Nelson, White Belt Kata, Three Arm Locks)","desc":"Revision of selected material from across the syllabus: knife defences, back strangles, full nelson, half nelson, white belt kata, and three arm locks. Demonstrates retained fluency from foundation to advanced."},{"num":26,"name":"Sparring / Attacking / Defending (optional) 3 mins","desc":"An optional three-minute sparring round covering attacking and defending roles, additional to the primary sparring assessment. Allows the candidate to demonstrate further sparring competence if they wish."}],"30 Throws":[{"num":1,"name":"Hip Throw","desc":""},{"num":2,"name":"Rice Bail Throw","desc":""},{"num":3,"name":"Knee Wheel","desc":""},{"num":4,"name":"Transitional Hip Throw","desc":""},{"num":5,"name":"Half Shoulder Throw","desc":""},{"num":6,"name":"Reclining Leg Throw","desc":""},{"num":7,"name":"Full Shoulder Throw","desc":""},{"num":8,"name":"Body Drop","desc":""},{"num":9,"name":"Stomach Throw","desc":""},{"num":10,"name":"Reverse Reclining Leg Throw","desc":""},{"num":11,"name":"Stamp Throw","desc":""},{"num":12,"name":"Drawing Ankle","desc":""},{"num":13,"name":"Crab Claw (Backwards)","desc":""},{"num":14,"name":"Front Scissor (Forwards)","desc":""},{"num":15,"name":"Leg Wheel","desc":""},{"num":16,"name":"Sweeping Loin","desc":""},{"num":17,"name":"Leg Throw","desc":""},{"num":18,"name":"Loin Wheel","desc":""},{"num":19,"name":"Springing Hip Throw","desc":""},{"num":20,"name":"Front Scoop Throw","desc":""},{"num":21,"name":"Shoulder Wheel","desc":""},{"num":22,"name":"Outer Hock Throw","desc":""},{"num":23,"name":"Rear Scoop Throw","desc":""},{"num":24,"name":"Valley Drop Throw","desc":""},{"num":25,"name":"Inner Hock Throw","desc":""},{"num":26,"name":"Rolling Ankle Throw","desc":""},{"num":27,"name":"Scissors / Naked Choke","desc":""},{"num":28,"name":"Reverse Body Drop","desc":""},{"num":29,"name":"Outer Wind","desc":""},{"num":30,"name":"Inner Wind","desc":""}]};
+
+  // ----- Belt catalogue -----
+  const BELTS = [
+    { name: "White",            color: "#F5F5F1", split: false, textOnColor: "#2C2C2A" },
+    { name: "Yellow",           color: "#F2C94C", split: false, textOnColor: "#5A3A00" },
+    { name: "Orange",           color: "#E8823A", split: false, textOnColor: "#4A1B0C" },
+    { name: "Green",            color: "#3B8A3B", split: false, textOnColor: "#FFFFFF" },
+    { name: "Blue and White",   color: "#2F6FB8", split: true,  textOnColor: "#FFFFFF" },
+    { name: "Blue",             color: "#2F6FB8", split: false, textOnColor: "#FFFFFF" },
+    { name: "Purple and White", color: "#6B4CA8", split: true,  textOnColor: "#FFFFFF" },
+    { name: "Purple",           color: "#6B4CA8", split: false, textOnColor: "#FFFFFF" },
+    { name: "Brown and White",  color: "#6B4A2B", split: true,  textOnColor: "#FFFFFF" },
+    { name: "Brown",            color: "#6B4A2B", split: false, textOnColor: "#FFFFFF" },
+    { name: "Black Belt",       color: "#1A1A1A", split: false, textOnColor: "#FFFFFF" },
+    { name: "30 Throws",        color: "#1A1A1A", split: false, textOnColor: "#FFFFFF" }
+  ];
+  const BELT_NAMES = BELTS.map(b => b.name);
+  const BELT_BY_NAME = Object.fromEntries(BELTS.map(b => [b.name, b]));
+
+  // Build moves from SYLLABUS (name + desc objects), fall back to generic names for belts with no data
+  function defaultMoves() {
+    const data = {};
+    BELT_NAMES.forEach(b => {
+      if (SYLLABUS[b] && SYLLABUS[b].length > 0) {
+        data[b] = SYLLABUS[b].map(m => m.name);
+      } else {
+        data[b] = Array.from({ length: 10 }, (_, i) => "Move " + (i + 1));
+      }
+    });
+    return data;
+  }
+
+  function getDesc(beltName, moveName) {
+    if (!SYLLABUS[beltName]) return "";
+    const found = SYLLABUS[beltName].find(m => m.name === moveName);
+    return found ? found.desc : "";
+  }
+
+  const STORAGE_KEY = "ssjjka_selector_v2";
+
+  function loadPersisted() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return { moves: defaultMoves(), recent: [] };
+      const parsed = JSON.parse(raw);
+      const moves = defaultMoves();
+      if (parsed.moves) {
+        BELT_NAMES.forEach(b => {
+          if (Array.isArray(parsed.moves[b])) moves[b] = parsed.moves[b];
+        });
+      }
+      return { moves: moves, recent: Array.isArray(parsed.recent) ? parsed.recent : [] };
+    } catch (e) {
+      return { moves: defaultMoves(), recent: [] };
+    }
+  }
+
+  function persist() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ moves: state.moves, recent: state.recent }));
+    } catch (e) {}
+  }
+
+  const persisted = loadPersisted();
+
+  const state = {
+    screen: "menu",
+    moves: persisted.moves,
+    selectedBelt: null,
+    includedBelts: [],
+    sessionCount: 10,
+    sequence: [],
+    current: 0,
+    playMode: "shuffle",  // "shuffle" or "inorder"
+    infoOpen: null,       // index of move with info panel open, or null
+    editingBelt: null,
+    recent: persisted.recent
+  };
+
+  const root = document.getElementById("app");
+
+  // ----- Helpers -----
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function key(item) { return item.belt + "||" + item.move; }
+
+  function buildSession(pool, count, ordered) {
+    if (pool.length === 0) return [];
+    if (ordered) {
+      // In-order: just slice to count, no shuffle, no recent tracking
+      return pool.slice(0, Math.min(count, pool.length));
+    }
+    const recentSet = new Set(state.recent);
+    const fresh = pool.filter(p => !recentSet.has(key(p)));
+    const stale = pool.filter(p =>  recentSet.has(key(p)));
+    const shuffled = shuffle(fresh).concat(shuffle(stale));
+    const catalogueSize = BELT_NAMES.reduce((s, b) => s + state.moves[b].length, 0);
+    const memCap = Math.max(5, Math.round(catalogueSize * 0.2));
+    const picked = shuffled.slice(0, Math.min(count, pool.length));
+    picked.forEach(p => state.recent.push(key(p)));
+    while (state.recent.length > memCap) state.recent.shift();
+    persist();
+    return picked;
+  }
+
+  function el(tag, attrs, children) {
+    const node = document.createElement(tag);
+    if (attrs) {
+      for (const k in attrs) {
+        if (k === "style") node.setAttribute("style", attrs[k]);
+        else if (k === "class") node.className = attrs[k];
+        else if (k.startsWith("on") && typeof attrs[k] === "function") node[k] = attrs[k];
+        else if (attrs[k] !== null && attrs[k] !== undefined) node.setAttribute(k, attrs[k]);
+      }
+    }
+    (children || []).forEach(c => {
+      if (c == null) return;
+      if (typeof c === "string") node.appendChild(document.createTextNode(c));
+      else node.appendChild(c);
+    });
+    return node;
+  }
+
+  function frame(beltName, innerChildren) {
+    const wrap = el("div", { class: "kr-frame kr-frame-solid" });
+    if (beltName) {
+      const b = BELT_BY_NAME[beltName];
+      wrap.className = "kr-frame " + (b.split ? "kr-frame-split" : "kr-frame-solid");
+      wrap.style.setProperty("--kr-belt", b.color);
+    } else {
+      wrap.style.setProperty("--kr-belt", "var(--border)");
+    }
+    innerChildren.forEach(c => wrap.appendChild(c));
+    return wrap;
+  }
+
+  function render() {
+    root.innerHTML = "";
+    if (state.screen === "menu") return renderMenu();
+    if (state.screen === "shuffle_setup") return renderShuffleSetup();
+    if (state.screen === "cross_setup") return renderCrossSetup();
+    if (state.screen === "play") return renderPlay();
+    if (state.screen === "edit_belts") return renderEditBelts();
+    if (state.screen === "edit_belt") return renderEditBelt();
+  }
+
+  // ----- Menu -----
+  function renderMenu() {
+    const logo = el("img", { class: "menu-logo", src: LOGO_SRC, alt: "Club logo" });
+    const title = el("h1", { style: "margin: 0 0 4px; text-align: center;" }, ["SSJJKA Adult Syllabus"]);
+    const sub = el("p", { style: "font-size: 14px; color: var(--text-muted); margin: 0 0 20px; text-align: center;" }, ["Pick a mode to start."]);
+
+    const card1 = el("div", {
+      class: "card-link",
+      onclick: () => { state.screen = "shuffle_setup"; state.selectedBelt = null; render(); }
+    }, [
+      el("p", { style: "font-size: 16px; font-weight: 500; margin: 0 0 4px;" }, ["Select within one belt"]),
+      el("p", { style: "font-size: 13px; color: var(--text-muted); margin: 0;" }, ["Pick a belt, choose how many moves, and select order or shuffle."])
+    ]);
+
+    const card2 = el("div", {
+      class: "card-link",
+      onclick: () => { state.screen = "cross_setup"; state.includedBelts = BELT_NAMES.slice(); render(); }
+    }, [
+      el("p", { style: "font-size: 16px; font-weight: 500; margin: 0 0 4px;" }, ["Randomise across belts"]),
+      el("p", { style: "font-size: 13px; color: var(--text-muted); margin: 0;" }, ["Pick which belts to include, shuffle across them."])
+    ]);
+
+    const grid = el("div", { style: "display: grid; gap: 12px;" }, [card1, card2]);
+
+    const editBtn = el("button", {
+      style: "margin-top: 16px; width: 100%;",
+      onclick: () => { state.screen = "edit_belts"; render(); }
+    }, ["Edit move names"]);
+
+    const memInfo = state.recent.length > 0
+      ? el("p", { style: "font-size: 12px; color: var(--text-hint); margin: 12px 0 0; text-align: center;" }, ["Remembering last " + state.recent.length + " moves — won't repeat them soon."])
+      : null;
+
+    const resetBtn = state.recent.length > 0
+      ? el("button", {
+          style: "margin-top: 8px; width: 100%; font-size: 12px;",
+          onclick: () => { state.recent = []; persist(); render(); }
+        }, ["Clear no-repeat memory"])
+      : null;
+
+    const page = frame(null, [logo, title, sub, grid, editBtn, memInfo, resetBtn].filter(Boolean));
+    root.appendChild(page);
+  }
+
+  // ----- Shuffle setup -----
+  function renderShuffleSetup() {
+    const header = renderHeader("Select within one belt");
+
+    const beltLabel = el("p", { style: "font-size: 13px; font-weight: 500; margin: 0 0 8px; color: var(--text-muted);" }, ["1. Pick a belt"]);
+    const beltGrid = el("div", { style: "display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; margin-bottom: 20px;" });
+
+    BELTS.forEach(b => {
+      const selected = state.selectedBelt === b.name;
+      const btn = el("button", {
+        class: "kr-belt-chip" + (b.split ? " kr-split" : ""),
+        style: "--kr-chip: " + b.color + "; " + 
+               (selected 
+                 ? "background: var(--accent-bg); border-color: var(--accent); color: var(--accent-text); opacity: 1;" 
+                 : "opacity: 0.5; filter: grayscale(0.5);"),
+        onclick: () => { state.selectedBelt = b.name; render(); }
+      }, [(selected ? "✓ " : "") + b.name + " (" + (state.moves[b.name] || []).length + ")"]);
+      beltGrid.appendChild(btn);
+    });
+
+    // Mode toggle
+    const modeLabel = el("p", { style: "font-size: 13px; font-weight: 500; margin: 0 0 8px; color: var(--text-muted);" }, ["2. Order"]);
+    const modeRow = el("div", { style: "display: flex; gap: 8px; margin-bottom: 20px;" });
+    ["shuffle", "inorder"].forEach(mode => {
+      const label = mode === "shuffle" ? "Shuffle" : "In order";
+      const isActive = state.playMode === mode;
+      const btn = el("button", {
+        style: "flex: 1;" + (isActive ? "background: var(--accent-bg); border-color: var(--accent); color: var(--accent-text);" : "opacity: 0.5;"),
+        onclick: () => { state.playMode = mode; render(); }
+      }, [(isActive ? "✓ " : "") + label]);
+      modeRow.appendChild(btn);
+    });
+
+    const countLabel = el("p", { style: "font-size: 13px; font-weight: 500; margin: 0 0 8px; color: var(--text-muted);" }, ["3. How many moves this session?"]);
+
+    const maxForBelt = state.selectedBelt ? (state.moves[state.selectedBelt] || []).length : 10;
+    if (state.sessionCount > maxForBelt) state.sessionCount = maxForBelt;
+    if (state.sessionCount < 1) state.sessionCount = 1;
+
+    const countWrap = el("div", { style: "display: flex; align-items: center; gap: 12px; margin-bottom: 20px;" });
+    const slider = el("input", {
+      type: "range",
+      min: "1",
+      max: String(Math.max(1, maxForBelt)),
+      step: "1",
+      value: String(state.sessionCount),
+      style: "flex: 1;",
+      oninput: (e) => {
+        state.sessionCount = parseInt(e.target.value, 10);
+        document.getElementById("count-out").textContent = state.sessionCount;
+      }
+    });
+    const out = el("span", { id: "count-out", style: "font-size: 16px; font-weight: 500; min-width: 28px; text-align: right;" }, [String(state.sessionCount)]);
+    countWrap.appendChild(slider);
+    countWrap.appendChild(out);
+
+    const startBtn = el("button", {
+      style: "width: 100%;" + (!state.selectedBelt ? "opacity: 0.5;" : ""),
+      onclick: () => {
+        if (!state.selectedBelt) return;
+        const pool = (state.moves[state.selectedBelt] || []).map(m => ({ move: m, belt: state.selectedBelt }));
+        state.sequence = buildSession(pool, state.sessionCount, state.playMode === "inorder");
+        state.current = 0;
+        state.infoOpen = null;
+        state.screen = "play";
+        render();
+      }
+    }, [state.selectedBelt ? "Start (" + state.sessionCount + " moves)" : "Pick a belt first"]);
+
+    const page = frame(state.selectedBelt, [header, beltLabel, beltGrid, modeLabel, modeRow, countLabel, countWrap, startBtn]);
+    root.appendChild(page);
+  }
+
+  // ----- Cross-belt setup -----
+  function renderCrossSetup() {
+    const header = renderHeader("Randomise across belts");
+    const tip = el("p", { style: "font-size: 13px; color: var(--text-muted); margin: 0 0 12px;" }, ["Tap to include or exclude a belt."]);
+
+    const beltGrid = el("div", { style: "display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; margin-bottom: 12px;" });
+
+    BELTS.forEach(b => {
+      const included = state.includedBelts.includes(b.name);
+      const btn = el("button", {
+        class: "kr-belt-chip" + (b.split ? " kr-split" : ""),
+        style: "--kr-chip: " + b.color + "; " + 
+               (included 
+                 ? "background: var(--accent-bg); border-color: var(--accent); color: var(--accent-text); opacity: 1;" 
+                 : "opacity: 0.5; filter: grayscale(0.5);"),
+        onclick: () => {
+          if (included) state.includedBelts = state.includedBelts.filter(x => x !== b.name);
+          else state.includedBelts = state.includedBelts.concat([b.name]);
+          render();
+        }
+      }, [(included ? "✓ " : "") + b.name + " (" + (state.moves[b.name] || []).length + ")"]);
+      beltGrid.appendChild(btn);
+    });
+
+    const toggleRow = el("div", { style: "display: flex; gap: 8px; margin-bottom: 20px;" }, [
+      el("button", { style: "flex: 1;", onclick: () => { state.includedBelts = BELT_NAMES.slice(); render(); } }, ["Select all"]),
+      el("button", { style: "flex: 1;", onclick: () => { state.includedBelts = []; render(); } }, ["Clear"])
+    ]);
+
+    const totalAvailable = state.includedBelts.reduce((sum, b) => sum + (state.moves[b] || []).length, 0);
+    if (state.sessionCount > totalAvailable && totalAvailable > 0) state.sessionCount = totalAvailable;
+    if (state.sessionCount < 1) state.sessionCount = 1;
+
+    const countLabel = el("p", { style: "font-size: 13px; font-weight: 500; margin: 0 0 8px; color: var(--text-muted);" }, ["How many moves? (" + totalAvailable + " available)"]);
+
+    const countWrap = el("div", { style: "display: flex; align-items: center; gap: 12px; margin-bottom: 20px;" });
+    const slider = el("input", {
+      type: "range",
+      min: "1",
+      max: String(Math.max(1, totalAvailable)),
+      step: "1",
+      value: String(state.sessionCount),
+      style: "flex: 1;",
+      disabled: totalAvailable === 0 ? "disabled" : null,
+      oninput: (e) => {
+        state.sessionCount = parseInt(e.target.value, 10);
+        document.getElementById("count-out").textContent = state.sessionCount;
+      }
+    });
+    const out = el("span", { id: "count-out", style: "font-size: 16px; font-weight: 500; min-width: 28px; text-align: right;" }, [String(state.sessionCount)]);
+    countWrap.appendChild(slider);
+    countWrap.appendChild(out);
+
+    const canStart = totalAvailable > 0 && state.includedBelts.length > 0;
+    const startBtn = el("button", {
+      style: "width: 100%;" + (!canStart ? "opacity: 0.5;" : ""),
+      onclick: () => {
+        if (!canStart) return;
+        const pool = [];
+        state.includedBelts.forEach(b => {
+          (state.moves[b] || []).forEach(m => pool.push({ move: m, belt: b }));
+        });
+        state.sequence = buildSession(pool, state.sessionCount, false);
+        state.current = 0;
+        state.infoOpen = null;
+        state.screen = "play";
+        render();
+      }
+    }, [canStart ? "Start (" + state.sessionCount + " moves)" : "Pick at least one belt"]);
+
+    const page = frame(null, [header, tip, beltGrid, toggleRow, countLabel, countWrap, startBtn]);
+    root.appendChild(page);
+  }
+
+  // ----- Play -----
+  function renderPlay() {
+    const header = renderHeader("Session");
+    const item = state.sequence[state.current];
+    const isLast = state.current >= state.sequence.length - 1;
+    const belt = BELT_BY_NAME[item.belt];
+    const desc = getDesc(item.belt, item.move);
+
+    const progress = el("p", { style: "font-size: 13px; color: var(--text-muted); margin: 0 0 20px; text-align: center;" }, ["Move " + (state.current + 1) + " of " + state.sequence.length]);
+
+    const pill = el("span", {
+      class: "move-pill",
+      style: "background: " + belt.color + "; color: " + belt.textOnColor + ";"
+    }, [belt.name]);
+
+    const numBadge = el("p", { class: "move-number-badge" }, []);
+
+    // Card with info button
+    const card = el("div", { class: "move-card" });
+
+    // Fetch the syllabus object to get the move number
+    const syllabusArray = SYLLABUS[item.belt];
+    const moveData = syllabusArray ? syllabusArray.find(m => m.name === item.move) : null;
+    
+    // Create the number badge if a number exists
+    if (moveData && moveData.num) {
+      const topNumBadge = el("div", { class: "move-number-top-left" }, [String(moveData.num)]);
+      card.appendChild(topNumBadge);
+    }
+
+    // Info button (only if description exists)
+    if (desc) {
+      const infoBtn = el("button", {
+        class: "info-btn" + (state.infoOpen === state.current ? " active" : ""),
+        title: "About this move",
+        onclick: () => {
+          state.infoOpen = state.infoOpen === state.current ? null : state.current;
+          render();
+        }
+      }, ["i"]);
+      card.appendChild(infoBtn);
+    }
+
+    card.appendChild(pill);
+    card.appendChild(el("p", { class: "move-name" }, [item.move]));
+
+    // Info panel (shown when open)
+    if (state.infoOpen === state.current && desc) {
+      const panel = el("div", { class: "info-panel" }, [desc]);
+      card.appendChild(panel);
+    }
+
+    const nextLabel = isLast ? "Finish" : "Next move";
+    const nextBtn = el("button", {
+      style: "width: 100%; padding: 14px; font-size: 16px;",
+      onclick: () => {
+        if (isLast) {
+          state.screen = "menu";
+          state.sequence = [];
+          state.current = 0;
+          state.infoOpen = null;
+        } else {
+          state.current += 1;
+          state.infoOpen = null;
+        }
+        render();
+      }
+    }, [nextLabel]);
+
+    const children = [header, progress, card];
+    children.push(nextBtn);
+
+    const page = frame(item.belt, children);
+    root.appendChild(page);
+  }
+
+  // ----- Edit belts list -----
+  function renderEditBelts() {
+    const header = renderHeader("Edit move names");
+    const tip = el("p", { style: "font-size: 13px; color: var(--text-muted); margin: 0 0 12px;" }, ["Pick a belt to rename, add, or remove moves."]);
+
+    const list = el("div", { style: "display: grid; gap: 8px;" });
+    BELTS.forEach(b => {
+      const row = el("button", {
+        class: "kr-belt-chip" + (b.split ? " kr-split" : ""),
+        style: "--kr-chip: " + b.color + "; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;",
+        onclick: () => { state.editingBelt = b.name; state.screen = "edit_belt"; render(); }
+      }, [
+        el("span", { style: "font-size: 14px;" }, [b.name]),
+        el("span", { style: "font-size: 13px; color: var(--text-muted);" }, [(state.moves[b.name] || []).length + " moves →"])
+      ]);
+      list.appendChild(row);
+    });
+
+    const page = frame(null, [header, tip, list]);
+    root.appendChild(page);
+  }
 
   // ----- Edit single belt -----
-  function renderEditBelt(){
-    const b=state.editingBelt;
-    const h=renderHeader(b);
-    const c=el("button",{"on":function on(){state.screen="edit_belts",render()},"style":"margin-bottom: 12px;"},"← Back to belts");
-    const l=el("div",{"style":"display: grid; gap: 6px; margin-bottom: 12px;"});
-    (state.moves[b]||[]).forEach((function(m,i){
-      const r=el("div",{"style":"display: flex; gap: 6px; align-items: center;"});
-      const t=el("input",{type:"text",value:m,"on":function on(e){state.moves[b][i]=e.target.value,persist()},"style":"flex: 1;"});
-      const d=el("button",{"on":function on(){state.moves[b].splice(i,1),persist(),render()},"style":"padding: 10px 14px;"},"×");
-      r.appendChild(t);
-      r.appendChild(d);
-      l.appendChild(r);
-    }));
-    const a=el("button",{"on":function on(){state.moves[b]||(state.moves[b]=[]),state.moves[b].push("Move "+(state.moves[b].length+1)),persist(),render()},"style":"width: 100%;"},"+ Add move");
-    const d=frame(b,[c,h,l,a]);
-    root.appendChild(d)}
+  function renderEditBelt() {
+    const b = state.editingBelt;
+    const header = renderHeader(b);
+
+    const back = el("button", {
+      style: "margin-bottom: 12px;",
+      onclick: () => { state.screen = "edit_belts"; render(); }
+    }, ["← Back to belts"]);
+
+    const list = el("div", { style: "display: grid; gap: 6px; margin-bottom: 12px;" });
+    (state.moves[b] || []).forEach((m, idx) => {
+      const row = el("div", { style: "display: flex; gap: 6px; align-items: center;" });
+      const input = el("input", {
+        type: "text",
+        value: m,
+        style: "flex: 1;",
+        oninput: (e) => { state.moves[b][idx] = e.target.value; persist(); }
+      });
+      const del = el("button", {
+        style: "padding: 10px 14px;",
+        onclick: () => { state.moves[b].splice(idx, 1); persist(); render(); }
+      }, ["×"]);
+      row.appendChild(input);
+      row.appendChild(del);
+      list.appendChild(row);
+    });
+
+    const addBtn = el("button", {
+      style: "width: 100%;",
+      onclick: () => {
+        if (!state.moves[b]) state.moves[b] = [];
+        state.moves[b].push("Move " + (state.moves[b].length + 1));
+        persist();
+        render();
+      }
+    }, ["+ Add move"]);
+
+    const page = frame(b, [back, header, list, addBtn]);
+    root.appendChild(page);
+  }
 
   // ----- Shared header -----
-  function renderHeader(t){
-    const h=el("div",{"style":"display: flex; justify-content: space-between; align-items: center; margin: 0 0 16px; gap: 12px;"});
-    const c=el("h1",{"style":"font-size: 20px; font-weight: 500; margin: 0; flex: 1;"},[t]);
-    const b=el("button",{"on":function on(){state.screen="menu",state.sequence=[],state.current=0,state.infoOpen=null,render()}},"Menu");
-    h.appendChild(c);
-    h.appendChild(b);
-    return h;
+  function renderHeader(titleText) {
+    const wrap = el("div", { style: "display: flex; justify-content: space-between; align-items: center; margin: 0 0 16px; gap: 12px;" });
+    const title = el("h1", { style: "font-size: 20px; font-weight: 500; margin: 0; flex: 1;" }, [titleText]);
+    const menuBtn = el("button", {
+      onclick: () => {
+        state.screen = "menu";
+        state.sequence = [];
+        state.current = 0;
+        state.infoOpen = null;
+        render();
+      }
+    }, ["Menu"]);
+    wrap.appendChild(title);
+    wrap.appendChild(menuBtn);
+    return wrap;
   }
 
   render();
