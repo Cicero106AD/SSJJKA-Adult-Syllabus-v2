@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<title>SSJJKA Adult Syllabus</title>
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIiBmaWxsPSIjMUExQTFBIi8+PHRleHQgeD0iOTAiIHk9IjEyMCIgZm9udC1mYW1pbHk9InN5c3RlbS11aSIgZm9udC1zaXplPSI5MCIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+SzwvdGV4dD48L3N2Zz4=">
+<style>
+  :root {
+    --bg: #F0F0F0;
+    --surface: #FFFFFF;
+    --surface-alt: #F7F7F7;
+    --text: #2C2C2C;
+    --text-muted: #666666;
+    --text-hint: #999999;
+    --border: rgba(0,0,0,0.1);
+    --border-strong: rgba(0,0,0,0.2);
+    --accent: #6B4CA8;
+    --accent-bg: #F0EBFA;
+    --accent-text: #6B4CA8;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  h1 { font-size: 22px; font-weight: 500; margin: 0; }
+  p { margin: 0; }
+
+  button {
+    font-family: var(--font);
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    border: 0.5px solid var(--border-strong);
+    background: #FFFFFF;
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, transform 0.05s;
+    -webkit-appearance: none;
+  }
+  button:hover { background: var(--surface-alt); }
+  button:active { transform: scale(0.98); }
+
+  input[type="text"] {
+    font-family: var(--font);
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    border: 0.5px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text);
+    -webkit-appearance: none;
+    width: 100%;
+  }
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: none;
+    cursor: pointer;
+  }
+
+  /* ----- Splash screen ----- */
+  #splash {
+    position: fixed;
+    inset: 0;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.6s ease;
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+  }
+  #splash.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #splash img {
+    max-width: 70%;
+    max-height: 65vh;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: splash-in 0.8s ease forwards;
+  }
+  #splash .splash-title {
+    color: #2C2C2C;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-top: 24px;
+    opacity: 0;
+    animation: splash-in 0.8s ease 0.3s forwards;
+  }
+  @keyframes splash-in {
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  #app-shell {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: calc(env(safe-area-inset-top) + 16px) 16px calc(env(safe-area-inset-bottom) + 16px);
+  }
+
+  /* ----- Belt frame borders ----- */
+  .kr-frame {
+    padding: 18px;
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    transition: background 0.2s, padding 0.2s;
+    position: relative;
+    border: 1px solid var(--border);
+  }
+  .kr-frame-solid {
+    border: 5mm solid var(--kr-belt, var(--border));
+  }
+  .kr-frame-split {
+    border: 2mm solid var(--kr-belt, var(--border));
+    box-shadow:
+      inset 0 0 0 2mm #FFFFFF,
+      inset 0 0 0 4mm var(--kr-belt, var(--border));
+    padding: 22px;
+  }
+
+  /* 30 Throws black frame styling */
+  .kr-frame-30throws {
+    border: 5mm solid #000000;
+    border-radius: 40px; /* Highly rounded as requested */
+  }
+
+  button.kr-belt-chip {
+    text-align: left;
+    position: relative;
+    padding-left: 34px;
+  }
+  button.kr-belt-chip::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background: var(--kr-chip, #888);
+    border: 0.5px solid var(--border-strong);
+  }
+  button.kr-belt-chip.kr-split::before {
+    background:
+      linear-gradient(
+        to bottom,
+        var(--kr-chip, #888) 0 33%,
+        #FFFFFF 33% 66%,
+        var(--kr-chip, #888) 66% 100%
+      );
+  }
+
+  .card-link {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .card-link:hover { background: var(--surface-alt); }
+
+  .move-card {
+    background: var(--surface-alt);
+    border-radius: var(--radius-lg);
+    padding: 32px 20px 20px;
+    text-align: center;
+    margin-bottom: 16px;
+    position: relative;
+    border: 1px solid var(--border);
+  }
+
+  .move-number-top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .move-pill {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    border: 0.5px solid var(--border);
+  }
+  .move-name {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0;
+    word-wrap: break-word;
+  }
+  .move-number-badge {
+    font-size: 12px;
+    color: var(--text-hint);
+    margin-bottom: 6px;
+  }
+
+  /* Info icon button */
+  .info-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    line-height: 1;
+    transition: background 0.15s, color 0.15s;
+  }
+  .info-btn:hover { background: var(--accent-bg); color: var(--accent-text); }
+  .info-btn.active { background: var(--accent-bg); color: var(--accent-text); border-color: var(--accent); }
+
+  .info-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  /* Menu logo (small version shown on home) */
+  .menu-logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain;
+  }
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADLw5OQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAA9YFJREFUeF7tXVp3ZEd15n0z542bN08yYwRIoAYb0zZNAm4wGAwYZky3m25/G39I/4T9eeyPaZ8YMBjMMBgDhm43m7YtNm2j2x9YgA6O7VZZqXJmXmfeX7X+mYnKnGvWjYjIzHPi6lm99z6f3YeqfPbeexwVFEVRFFUVwU9FURRFUTXBD0VRFEVRNcEPilXm4Ycf9gcGBvC6HlD7C5XbHhSFr7m5OajTfP4fFL7C665Ofw8KX14867f6b/m8N8PnvxUFXz7bVfiEwpeXz/ZVPt+l8H9Q+IKK/3w+i3B8OfFzH1XhkxD5fNbi+Eri+CwiInrO8549C6uM2Xj8X7E6fH//OQ34v1Y/RVTX8P/K/f39+I//Z/VTU4V775H9XbofhS9f5b+u+0b91X9e+fOf+yv834wMhS+fzeazfdbv//R5f5XPV5XPyOfv+WxFhV/4H1X4q44P7u8PCl++9F7l58vPZ/unfN5X4fOKX+Xnr8LnVf5v9f/H//f5/Oof6v/+v+V3v0r5+Wp//nOf99U1/H8X4ffX7z47v/Z5v9Xfq4r7fFVZ48uXFz/P0L//M/H5z5XfzY9//v+f686X9/H5/Of/G3G8OfF3K/IOfq6P+PnPVp3T6H37r9VPkYvF/6vi5+rn5V/uE/K7X6+8N/67f7lvyO//e8XPe4X7vEL5//P/V/5C5P/5/yt//hvyb4zfy78xfi9vht/H2/E0Rfw+H35u/HwFfk48b48fU6XN6H1//z5v9Xf57v/f578H5Y/B8Xfw/v7jI/89jPq9W/4fHz+H9f/j/5R/m9/bZf3wW4fO/P8/I/Yv8f87Pv7D6Y/7ZOn75vX354/f5vH/V/z8//hM/N5/PyOc/O26/8f4+/2w//m4F//f5N/rnB4X8/+f//8p/5v/6V/u/uY5v8v2P/X/wX/0v8/lO79u7/v9Yf+V393//N//T+8/f9T+Xw6v4+Z4X/m/9eT7P+I77fK/Xz//9U/8v7vfM9Xf1/vP/Z+f8+s9V58+I//z/F//l+v/V5+0P5X8+W/06/j/+/08+b5/v+X/P5/5q/D/8v+8N9/Xm8/77f7f9X9fv8//v8//f/X//X4fD6/F/8//f6+8N/9//X6Xf83O//5/5X8Xv/xW//8/E//v/iv9+/+X4/b//V/x8fD5/Z/7+fH9//rVxfC/X8f87fs+/5f9b4f97u+uP5Z++YxUf7fP+Z9XffwZfP/5/Xj9f7+9UfD5zX8U9K4L7w5//N//X/P///uT7//z5X+/v889S3D/9vP/Z//X6+e9Sff8+uN//zFf8X///5e/f/Vf897/+87//n/953//r6//+Zf///eZ3eX9Xxf/P9X+/9f/+/8v9vfr/fI9X+/5/r+Lv///v+Vf9X7//v/z/u//7//+Vf7/339+r+P96/7++v9//+r/fv//uT7/Xf///uT/Vf49X9/F3//97f/+r9//f/1f9X78//8vfv//9X//55//vU79/p/+9b//Xv9X//7//uT/3///f/9//f///X///9X//75///r/+/6//7///v//+f/9//r/ev+/6//7/v///v/+//X///X///9f///n//+//f/v/v/3/+//v/+//X///V///f////f/+//f/7///+f///9f///1/v/7/ev/r///+f///1/X///X///1///7/ev/7//3/9/v9/X+v/f/+/+v/+//v///6/v///+f/v///X///X9ev9////r+9e1vXvfvX9r///+//3/fv///9/v7///9ev9e9//1///7/ev9f///X///n/+//3///f///v//+f///n//v///9f7/+//f////+//9f///9f///r/9f/ev///9ev9/r+//r///X///X///X///f///v///6/X///V////f////X///X///9f///f////f////f////X9f//+f9/X+X9X+f//9f/r+v///+v6/+//1///X///f///f/39//+///f///9f///v//X9ev/r+/+/7////+//v/7///6//v/+//+//7/+f///+v6/X///9f//9f///r//v/r///r///+v///6//9e//vXtb1rXtb17371/evX9f/r+///+//39/X9X9f1f1f1f/r+///+//39/X9//9f9f///V////+//+//v/7//f/39//9//X/1/X///V9a9ev+9rXtX///+v///r+/+/6//X/+//f/r+/+//f/v+v//X///f///v///+v+9//v/7//X///X///v////f////v////X////X///1////r+9a9e1e1r2tev9+9/f///7//+f/9//r///X9X9f//+v+9/+//+//+//7/+f/7/+v/+/6//7///6//+//3///7////+/+///ev///+f9/r9X9f1////V/+//f////7/+/6//7/ev///7////X////+/+//9X///+v///ev+9evatf1vavXtfvX//373/+/7/r///f//7/+f9/n/+//X////f/7//f////+/+//9X////7/+//9X///9f///+///9a1rWtb//f6/ev///9e1/ev////6//X//X////7////+//9f///+f///r+///9a1rVtb//f6/X//9a9rWtb//f6/r9a//7/+v///+f/v////X+X9f1///f/9f9f///1/9/3+X////X/r/9f////X/X9f/ev9/Xtb//f6/ev+9a//ev9//f//9f/X////7///9f///7////r//v/r///6////6////+v////r////+f///r////+v///X+a9rVta3tb//f5/+va3tb//f6/Xta1re9vX///X+///ev///Xtb//f6/r9e1/X96//ev+va/rW//Xtb//+va//+//+//r/9ev9ev/7///X9f//Xtb9f5////v/+//X+va9rW//X///Xtb3vfvX//39e9f/r///6/X///X///r////7////v////X///+v+///+f/////X////7/X///v//+//f/v///+v////6////X////+//X+X9X//f5/X///f/+//v///f/+//v///r+X//f5/X///f/+//v///9f5//evf7///r+9a//X//r+//f/r/9ev9a//+//f////r////7/X///X////X////9X///X////v////X////X///1////9X////7////r////+///9ev///9ev9evf//+v+va/rX//r2va3r297Vtf/f6/Xtf/Xtb//ev//Xtf///9f////+/3////r+//v///X/r/9X/r/9ev9X/r/9ev9X9ev9Xtb9a1rWva9r3tb1rX//X///Xtf9a1f9a//ev///+v////+///ev///+v+///7////X///X///1///7////+////X///r//f6//7///f9/X////r+v/ev//X9X9ev96/ev//Xtf///9f////+/3////r+//v///X/r/9ev9ev9ev9a1re//ev9/r///+v+///+f9Xtb///Xta//f5///+//39/ev////Xtb/evX9ev//X+va1vf5re16/Xtb3+X+v+9a/XvX9Xta1vf9re1re///9re///+///v////+//ev+///r////ev///+v////r////X///+f///r////7///+f/////ev////+v/r///9ev///9ev+va/ev+va/ev////+v///9f////ev+va9r//7/ev+///X+a1vb9/n9a1vb9ev9f1vf3/n/r+X//evf///ev///r+//v+//X9f1a1vb//e///7////ev////7///9ev9f////r+///7////r///7///9X///+///+v///7///9ev+Xta1re1re17Wt7Wre//f6/Xte/vWtb/Xtf3rW9rWt7Wvf/re//ev9/Xte///+v///6//7/+v//+v//+f9/X//X////7////+/3//9X9f9ev///+v//9ev///X////X///r////9f///v/v////9ev////r////X////+v////+v///+f///9f9e1/e///+v//f///7////+///r////9f////X////r////+///9a1vb9+9a1rb//evXtf///f/f69a//9Xtb9a1v/ev9ev///7////Xtb9ev+v5/+//f/7/v9ev9X9ev///X9f9ev9a9f9ev/X+///r+va1vf69re9rWt7//ev9ev////ev//+f///r9f9e1e3r3///X9X/+/7//X/r///9X////9f///X///9X////r////X////9ev///9f////ev//9ev//9f///7////r+//v////r///X9///r+f////r////7////v////r////9X////v/f///f////v////X////+v///7////Xta3tb///re//f5////re//f5/9//X//7////6////r+//ev5re///+va3re9/rWt6//+/+va1vf6/ev//Xtb///Xtb///r9f9f5///+///ev//r///ev9f9ev///ev9a//re9/f///r29/3/ev7//7/v///X9X9f1ev//re/Xtf9a/r//7////r+va/re1re///9/X9X9f1f1f/f6/v////+f///f5/Xtb//+9a//+va///+v///v////+///f//+v//ev////r////r+//ev+va///ev7//ev///f5////X9f1///9///ev///+v////+v///+f/////v///X///r/9+///evX9f1/W/+/7//re9/f///f////r////ev////ev///r////ev////+v////r////7///ev+f/9/n////+v////X////ev+v//X9f1/f6/Xtf1/f6/X/9X9f/Xtb/ ev////re//ev9re1rX/3///e1rW//+9re1veva///ev6//ev+va3/f5///X+va/v//+//r///X+a3ta///re///v9///Xtb///f6///re//+va//e///6///+/+/ev///+v///v////ev+va///7///9a1rf///6///+/+/6//X///9ev////9ev///X///r////r+//v////7/Xtb//ev+Xtb///X9a9rWtX/ev9a1re///ev9/ev7//+/3////+///r////r+//v///X/7/Xtb///r/7/Xtb//+va3tb///f5////6//ev///7///9ev9ev////9ev///f5///ev////X////v////X////+v////v////r+//v////r////r+Xtb//X/Xtb3te//f59f9f////+v///9f////+/3////9X////+///9X9a9rXte/69a3te//f59re///r///X9X9Wtb///6///f//7////r///9f/ev///ev///7///+v9re16///r9re3te9/Xte/rWt//Xtb//re///X9a1rb///ev9re1re9re17W/+/+//X+///re1vf3////re1vf5///7////r+//v////r////+v////+///X////+///ev///v/+/+//+f/7/v////r///v////v////7////v////ev////7///ev////re///r+//ev///X////9X///+v///v/+//X9e1vf3/e1rWt7Wt7Wtb/+//v+///7////ev///+va3rb//7/ev+re1vf5/X/r+//ev///+v///X+va1rf//+v+X/X9X9X1rX/3te9re///Xtf9a3tb///Xtb9ev+///6///f5/ev9a1vf3+///r+//r+//X////+///7////v////X///+f9ev///ev////9ev///9ev//9f///7/X///v//f/3////r////+/ev////+v///r////+v///7/re//ev9re///f////9X////9ev///X////r////7////v////X///+f9e1tb//+v//f///ev///r/ev+///7///ev////re1rf//9ev9ev+X//r///r+//r+//X////v////v////X///+f////7///+/7///9f////X///r//v/+/+//6/f/3////r////ev+v/ev//r/v///7///ev///ev////7///f5////re9re1rb///X+va9rb///re1rf69b//+///ev////+//r+va1rf///f//7/+v////7////v////X////+f9ev///ev+///+/ev+va3/ev9Xtf///X///X+9/f///ev///r+Xtb3tb/ev////ev///+v////+v///ev///r/re9/f5/r9re1vf69f9ev///ev///X9Wta//+//r///7///9f/re///re1rf3///Xtf///r///X9a1rb///f5////r////ev///ev///r///+v9re3/X9a3re/ev+re9e3+v+re3v+/+9re9/ev////r////+/X/9ev///ev+///r////+f/r////X///+f9X+X////X/+/+v9///X/ev///r+9a3v///r9e1vf5///f7/Xtb///r///+va3/ev///r/re//Xtb///X9a1rf///6///f5///9X////9f///re1rf3///7///9ev9ev///7///ev9re1rf///f7/ev///7///ev///+v+va/re1rf///ev9/X9re1re9ev+va3tb///7////v///+v9ev///+v+///re1vf3/e1rf///f5///re///ev///r+//r+//+v+//re9rf9//re9/+//+v6///9f///+va/ev///X/X////+v////7///+/+//9f///+v////6/ev/39f9b///re//e///6///+/+/6//ev//X+X///f5/ev///7/Xtb///r///Xtb9ev///6///+/ev////r////X///9f///X+va//re///re///6/3/Xte//+v//ev////re///re1rf///f5///ev///ev///6/ev////9ev////X//re1vf5///f5///ev///+v//9ev////ev//re1vf97Wt//ev///re//+v////7///+v9ev///+v+///re1vf3/e1rX/ev////+v9e1vf5/X/r///X/X////X///+v////+/ev/ev7//Xtb3rWt7ev///ev7//r+//ev////re///re//+va//e///re9vf//7/ev///r9ev9ev+9re9/e9/Xte/vWtb3tb///v/Xte/rWre//re9/e17e///r9re3te9/Xte9a1r///re9/+17e//f6/ev///+v9+9ev////re3te9/e///ev////7/X9///+v//ev////7///9f////+v///f////6/r/+/6//7///+v+X/X9ev////re1rf/re9/ev////ev////9X////+///X////re9vf5///re1re9rf3/re1re///ev///ev////re///r9re1rb//f5/X/r/ev///re///ev////r+va/re1vf3/Xta3ta/ev////X////Xtb3te//f59f9f////re1rf///+v/X/+/+//3/X////+///+v9///X/ ev///r+Xtb//r///re9+97+f///X9X/9ev////Xta//+va//r///r///re//re///+v//+v//r///re9a3vf1rXta1re1rf//9ev9ev+X+va3re9/rWt/ev///re//r/r+//f/r/re3tb///X///Xtb3v//f5///+//r/re1re9f1vf//ev////r9ev9a1re9re17Wt7Wvf/re9re///+v///7////ev///+va3rf///r9a3te/rX9f1///f//+v//ev////9ev///re//ev9///re//ev9///re//r///ev9ev////ev////re///+v////ev////re///9X////r+//f////X9a3t73tf1rW9re1rf//9ev////r////+/ev////+v/ev///+v///7/+/ev///+/ev9ev////7///r+//+va/re1vf9rXta1re1rf///+v////+v////+///+/+//f////r9ev///7///7/e///+f///ev///+f/////ev////+v///9e1rf///f5/Xtb//+9rf9+///v/+//9f///X+v///9ev////+/X/9ev9ev////+/X////+f////+v///+f////7/+/+/+X////ev////r9e///6///re//ev////7/+//9ev////+v//re1vf///+/3/X/+/+//3/X////+///+/7//ev////ev+va///r/+/ev////+v/ev///re1rb//+va3re9/re3re1rb//X////7////re//+va//re//re//e///6///re//e///re//e///ev///+/ev9ev////re//re1re9ev+va3tb///7////r////X///re9e///+v//re//re///re//Xtb///X9a1rb///f5///+v9e1/e1rW//re9/re1rf///f5///Xtb9ev+///6///f5/r////+///ev///+v9+///ev//re9/X//X+X////X////ev///7/+/+//f/f69a//9ev9ev9ev9a//re///Xta3rWtb///re//re9rf3re9re1re9re9a//re///ev////+//r+va1rf///+v////ev////7////+v////f9ev////+/X/+/+///ev///v/+/+//+v+//r+//9ev////9ev////X///re1rb//re///+va/ev///7////ev+f/re///7/ev////ev//f5////+/3/+/+//3/X////+///X+a9r/e///ev7//r+//r+//X////re///re//+v///+/+X////+/+//ev+va///7////re///f5/X/9X9f1ev//X9a3tb///Xtb///+v////9f9a//ev9/ev/ev///+v///7///ev///ev////+/+X////ev////v///re//X////7////r////X///+v///+v9///r/X//r/9+///ev///re//r9re///+v///7///+v///re1rf//re///ev////re///re1rf//Xtb///X+va1rf///7/re9/e///re1re9ev///7/+/+/+va///re//r+//ev+r+//r/9+///9f////+/3///+/+//3/X////re//r/9ev///ev+va///v///re///ev///v///+/3//9X9a1r///+/+//v+//r+//re9rf9//v/e1rW///re//re1re9re9e///+/+//ev///X////9X////ev+r+//v/f9X/re//X9re///f5/Xte/vWtb3tb///ev+Xtb///Xtb///r///X9a9rXte9re3tb///ev+9a1rf3re9re1re9re1re9a///r////+//X/9re97Wt7//f5///ev9ev////ev///f5///re///ev////+f////X///9f///+v/ev/ev7//r+//r+//+v+//r+//e///re9+X/f5///X+///ev////9ev////r////+/X/+/+///ev////+//r/r///ev9f9ev///+v9re1re9re17Wta3rb//X////9X/ev9ev////Xtb/ev9re9e3+v+va3tf///v9/ev////+v9f9ev////+/3/f5///ev9X9ev9ev////f////v/9ev///9ev//re1vf97Wt7//re9/e///ev///ev///7///+/+//9f///r+//+v5////+v////X////ev////r+va/re1rb//+va3re9/f5/r9re9e3+re//re1rb//+va3rb//7/X/+/+//3/X////+///Xtb//7////+/ev////+v//Xtb///r9e1vf5///f5///Xtb3tb/ ev////ev///6///ev////ev////9X////+///Xta3re1rb//X////9ev9ev///+v9re1vf69b//+v///ev////r////+/X/re//r9a1rf///6///ev///ev///r+///ev////ev///+v9ev///+va3rf///7/+/+//9f////9f//+va/ev///+/+X////re1rf///6///ev////9X////9ev///+/+//f////+v///+/+/+//+v//f///ev///+f9ev///ev////+/X/+/+//6/f/3////r+af///9///f////v+va3/ev///r9e3tb//+va3rb//re1rb//evXtf///7///9e1rf///f////+/3/f5////ev//+f9X+X////X////+v9X/+/+//3/X////re//e///6///+/+/6//9f///r+//9ev////v////r////+/+/+/+//+f///+v9Xtb///r/7/+/+/+//9f///+v///v////v////v////X////+v////r////ev////+v////+v///9f////X////ev////+v////ev////7///ev+f///ev///+va/re1rf//9ev9ev/re///f////9X////9ev///7///7////X/X////ev+f/+/+v9///ev///+v+//e///7////9f///+v///7/+/ev////+v//re1vf///6///re//re9rf3///f5/X//X//7////6///9f///v9/ev9a//ev9ev////re//r+//ev+r+//f5////v////re1rf//+va3/f59ev////9ev9a//ev7/r9Xta9vf//ev/ev////r////7/+/+/+//6/f/3////X9a1re///+v//+/+//v/9X9f1///+v//9ev//re1rf///+v/X+9re//+v////7/3/f6///r+///re///ev///7///ev///r+//e///v///Xtb3//f5////re//X////7////r////+f/v///+/+/+va///+f////7/re///ev///r/ev9a//X///re///ev9ev////+/3////re9Xtb//r///+///+///+/ev///r9e3v///Xtf/X9a1rf//evXtf///+v/Xtb///r9a3te/rXte1vf9/nte1rb//X////9X/ev9a//+//+//9f////r9ev9ev///ev9ev////ev//f5////+/3/+/+//3/X////+v9a1vf3/e1rf///f5///ev////+//r9re1re9ev+va3tb///7////v///+v9ev///+/3////re///ev///r+e///6///re9Xtb///7////ev+f////7///+/7///9f////ev////7////7////ev////7////ev////7///ev+f///r////+va/re1rf//re///re///ev////ev///+v+va/re1vf3/e1re9re1vf//9ev////ev////9ev////X///re//ev////7///+/+//9ev///+v9///X/ ev///r+va3rf///r////v////+/X/+/+///ev///re1rf//re///e///v////7///re//X////7///9f////re//re//e///6///+va///+/7///+f9ev///ev+///+/+/+r//ev////Xtb///X9a1re///f5/Xte/vWtb3tb///ev+Xtb///X+e///6///re9Xtb///f6///+va3/ev///r9e3re1r///ev9/ev7///r/+/+//3/X////re///re//+v///X+///ev////9ev////9ev////9X////ev////+/3/re///ev///r+//v///X/+/+//+f9X/69ev////ev////9ev////+/+/+//+f///+v9///X/ ev///Xtb///re///e///v9///+va///+/7///+/7//ev////ev+va///7////re///f5/X/9X9ev///re1rf//re///re///re//re///+v9ev////re//r9re///ev///+f+///Xtf///f////v////7////+/ev////+v//Xtb///r/7/re//ev9/ev///7////ev9///r/X//r/9+///9ev///9ev9ev////9ev////+/+/+//f////r////ev////+v+v/ev//r/v///7///ev///+/+X////ev////ev////X////+v////+v///9f////+v9X////X////ev+f/re///e///7///re///e///6///ev///r9a1rf///6///ev////ev////+v/ev///+/ev9ev+v9re///re1rb//+va1rf//f5////r////ev9X////7////9X9ev///+/+//9f////r9X/+/+//+f9Xtb///re//re///re//re///+v//+/+//v+//r+va1rf//re///e///v9/re///+v+//e///v///f5/ ev+X/9X9X1rXte//ev9ev////r////7/+/+/+//6/f/3////r+//ev+///r+//r+//X////re///re//v9//e///6///re//re//Xtb///X+Xtb///X9a9rb//re///f////9X////ev+r+//v/re1re9rf3re9re1rb//f6////re1rf///+v/X/+/+//3/X////re//Xtb///r+//e///+v//+/+//ev+va///v///f5///re///ev///r/Xtb//+va3re9/re3re1rb//Xtb///re1rf///+v//re//X9ev///Xtb///f6/ev///+v///e///6/X////ev+v/ev///re///ev///ev////9ev////+/+/+//+f9Xtb///r/re9re9r3vf9re1re9ev+va1rf//f6///+/+X/r9Xtf9/ ev////v9re9e3+re//re1rb//+va1rf///+v/+/+//3/X////+v9Xtf9e1rf///6///ev////9X9a1rb///f////v///7////ev///+/3//+v//f///ev///r+//v///ev////X////v///+/ev////re1rf///7/f9X/+/+//+f9X9X////7/Xtb//ev//9f///7/Xtb///r/re9/e9/ev9re9e3+v+re9re//f69a1re/re///ev9X9a1rb///6///ev////+/3/re//X9X9ev9ev///7////r+//+va/re1rf//re///e///v9/re///+v+//e///v///f5///ev///ev+va3rf///7/re///ev///re1vf97Wt7//+v//f///+/3/X/+/+//6/f/3////Xtb///f5///+//9f////re1vf9rX/3///e1rW//+9rf9+///X////ev///X+///ev////9ev///+/X/+/+///ev////+//r/+/+//v///r+///ev////ev///r///+v////ev////ev+f////v///re//X////7///9f////re//re9rf3///f////+/3/+/+//6/f/3///+///r////r+//r+//X////+/ ev///v////r+//+v+//ev+va///7////re///f5/r9a9rb///6///+/+/ev///+/ev////+/X/9ev9ev///+/X////ev////ev////ev////+/+v///6///re//re//re9rf3///ev////re9ev///+/3/+/+//6/f/3///+///ev////r+v/ev+///+/ev////9ev////+/ev9X////7/re///re//+v////9f////+v9f/X/Xtb3te//f59re///r////Xtb3te/re//re9X/re///f5////v////X////ev+r+//+v9a1rb///X+va1rb///Xtb///re///re//XTB","class":"kr-belt-chip"},"White (0)"),el("button",{"on":function on(){state.editingBelt="Yellow",state.screen="edit_belt",render()},"style":"--kr-chip: #F2C94C; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Yellow (18)"),el("button",{"on":function on(){state.editingBelt="Orange",state.screen="edit_belt",render()},"style":"--kr-chip: #E8823A; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Orange (13)"),el("button",{"on":function on(){state.editingBelt="Green",state.screen="edit_belt",render()},"style":"--kr-chip: #3B8A3B; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Green (25)"),el("button",{"on":function on(){state.editingBelt="Blue and White",state.screen="edit_belt",render()},"style":"--kr-chip: #2F6FB8; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip kr-split"},"Blue and White (13)"),el("button",{"on":function on(){state.editingBelt="Blue",state.screen="edit_belt",render()},"style":"--kr-chip: #2F6FB8; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Blue (12)"),el("button",{"on":function on(){state.editingBelt="Purple and White",state.screen="edit_belt",render()},"style":"--kr-chip: #6B4CA8; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip kr-split"},"Purple and White (13)"),el("button",{"on":function on(){state.editingBelt="Purple",state.screen="edit_belt",render()},"style":"--kr-chip: #6B4CA8; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Purple (12)"),el("button",{"on":function on(){state.editingBelt="Brown and White",state.screen="edit_belt",render()},"style":"--kr-chip: #6B4A2B; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip kr-split"},"Brown and White (13)"),el("button",{"on":function on(){state.editingBelt="Brown",state.screen="edit_belt",render()},"style":"--kr-chip: #6B4A2B; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Brown (21)"),el("button",{"on":function on(){state.editingBelt="Black Belt",state.screen="edit_belt",render()},"style":"--kr-chip: #1A1A1A; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"Black Belt (26)"),el("button",{"on":function on(){state.editingBelt="30 Throws",state.screen="edit_belt",render()},"style":"--kr-chip: #000000; display: flex; justify-content: space-between; align-items: center; text-align: left; width: 100%;","class":"kr-belt-chip"},"30 Throws (30)")]);
+    const d=frame(null,[c,h,l]);
+    root.appendChild(d)}
+
+  // ----- Edit single belt -----
+  function renderEditBelt(){
+    const b=state.editingBelt;
+    const h=renderHeader(b);
+    const c=el("button",{"on":function on(){state.screen="edit_belts",render()},"style":"margin-bottom: 12px;"},"← Back to belts");
+    const l=el("div",{"style":"display: grid; gap: 6px; margin-bottom: 12px;"});
+    (state.moves[b]||[]).forEach((function(m,i){
+      const r=el("div",{"style":"display: flex; gap: 6px; align-items: center;"});
+      const t=el("input",{type:"text",value:m,"on":function on(e){state.moves[b][i]=e.target.value,persist()},"style":"flex: 1;"});
+      const d=el("button",{"on":function on(){state.moves[b].splice(i,1),persist(),render()},"style":"padding: 10px 14px;"},"×");
+      r.appendChild(t);
+      r.appendChild(d);
+      l.appendChild(r);
+    }));
+    const a=el("button",{"on":function on(){state.moves[b]||(state.moves[b]=[]),state.moves[b].push("Move "+(state.moves[b].length+1)),persist(),render()},"style":"width: 100%;"},"+ Add move");
+    const d=frame(b,[c,h,l,a]);
+    root.appendChild(d)}
+
+  // ----- Shared header -----
+  function renderHeader(t){
+    const h=el("div",{"style":"display: flex; justify-content: space-between; align-items: center; margin: 0 0 16px; gap: 12px;"});
+    const c=el("h1",{"style":"font-size: 20px; font-weight: 500; margin: 0; flex: 1;"},[t]);
+    const b=el("button",{"on":function on(){state.screen="menu",state.sequence=[],state.current=0,state.infoOpen=null,render()}},"Menu");
+    h.appendChild(c);
+    h.appendChild(b);
+    return h;
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
